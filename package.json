@@ -1,0 +1,7 @@
+{
+  "name": "module-name",
+  "version": "10.3.1",
+  "dependencies": {"ws": "0.8.0",
+                  "pdfkit": "0.7.2"
+                  }
+}
