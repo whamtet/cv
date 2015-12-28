@@ -16,7 +16,7 @@
     </style>
   </head>
   <body>
-    <a href="/pure-js.html">Pure Javascript Version</a>
+    This version uses no AJAX
     <div id="editor" style="width: 48%; top: 40px;">
     </div>
     <iframe style="width: 50%; float: right; height: 100%" id="frame">
@@ -28,6 +28,9 @@
       editor.setTheme("ace/theme/clouds");
       editor.getSession().setMode("ace/mode/clojure");
     </script>
+    <script src="/cljs/bundle.js"></script>
+    <script src="/out/goog/base.js"></script>
+    <script src="/main.js"></script>
     <script>
 
       var timeout;
@@ -35,8 +38,6 @@
         clearTimeout(timeout)
         timeout = setTimeout(f, 500)
       }
-
-      var setText = function(text) { editor.setValue(text, 1)}
       function get(url, f) {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -47,40 +48,17 @@
         xhttp.open("GET", url, true);
         xhttp.send();
       }
-
-      function post(url, params, f) {
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function(){
-          if (this.readyState == 4 && this.status == 200){
-            //this.response is what you're looking for
-            f(this.responseText)
-          } else {
-            console.log('got status', this.status)
-          }
-        }
-        xhr.open('POST', url, true);
-//        xhr.responseType = 'blob';
-        xhr.setRequestHeader('Content-Type', "application/x-www-form-urlencoded")
-        xhr.send(encodeURI(params));
-      }
-
-      var refreshPdf = function() {
-        var text = editor.getValue()
-        var params = 'edn=' + text
-        post('/get-pdf', params, function(response) {
-          var randNum = (new Date()).getTime()
-          var url = "/get-pdf2?sym=" + response + "&rand=" + randNum
-          var frame = document.getElementById('frame')
-          frame.src = url
-        })
-      };
-
-      editor.on("change", function(x) {
-        delayF(refreshPdf)
-      })
-
+      var setText = function(text) { editor.setValue(text, 1)}
       get('/test.edn', function(x) {setText(x)});
 
+      editor.on("change", function(x) {
+        delayF(function() {
+          my_cljs.core.refresh_pdf(editor.getValue())
+        });
+      })
+
+
     </script>
+
   </body>
 </html>
