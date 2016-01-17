@@ -1,10 +1,11 @@
-// Compiled by ClojureScript 1.7.48 {:target :nodejs}
+// Compiled by ClojureScript 1.7.170 {:target :nodejs}
 goog.provide('dogfort.middleware.session.memory');
 goog.require('cljs.core');
 goog.require('dogfort.middleware.session.store');
 
 /**
 * @constructor
+ * @implements {dogfort.middleware.session.store.SessionStore}
 */
 dogfort.middleware.session.memory.MemoryStore = (function (session_map){
 this.session_map = session_map;
@@ -48,8 +49,8 @@ dogfort.middleware.session.memory.MemoryStore.cljs$lang$type = true;
 
 dogfort.middleware.session.memory.MemoryStore.cljs$lang$ctorStr = "dogfort.middleware.session.memory/MemoryStore";
 
-dogfort.middleware.session.memory.MemoryStore.cljs$lang$ctorPrWriter = (function (this__809__auto__,writer__810__auto__,opt__811__auto__){
-return cljs.core._write.call(null,writer__810__auto__,"dogfort.middleware.session.memory/MemoryStore");
+dogfort.middleware.session.memory.MemoryStore.cljs$lang$ctorPrWriter = (function (this__828__auto__,writer__829__auto__,opt__830__auto__){
+return cljs.core._write.call(null,writer__829__auto__,"dogfort.middleware.session.memory/MemoryStore");
 });
 
 dogfort.middleware.session.memory.__GT_MemoryStore = (function dogfort$middleware$session$memory$__GT_MemoryStore(session_map){
@@ -58,26 +59,26 @@ return (new dogfort.middleware.session.memory.MemoryStore(session_map));
 
 /**
  * Creates an in-memory session storage engine. Accepts an atom as an optional
- * argument; if supplied, the atom is used to hold the session data.
+ *   argument; if supplied, the atom is used to hold the session data.
  */
-dogfort.middleware.session.memory.memory_store = (function dogfort$middleware$session$memory$memory_store(){
-var args3254 = [];
-var len__1269__auto___3257 = arguments.length;
-var i__1270__auto___3258 = (0);
+dogfort.middleware.session.memory.memory_store = (function dogfort$middleware$session$memory$memory_store(var_args){
+var args6106 = [];
+var len__1288__auto___6109 = arguments.length;
+var i__1289__auto___6110 = (0);
 while(true){
-if((i__1270__auto___3258 < len__1269__auto___3257)){
-args3254.push((arguments[i__1270__auto___3258]));
+if((i__1289__auto___6110 < len__1288__auto___6109)){
+args6106.push((arguments[i__1289__auto___6110]));
 
-var G__3259 = (i__1270__auto___3258 + (1));
-i__1270__auto___3258 = G__3259;
+var G__6111 = (i__1289__auto___6110 + (1));
+i__1289__auto___6110 = G__6111;
 continue;
 } else {
 }
 break;
 }
 
-var G__3256 = args3254.length;
-switch (G__3256) {
+var G__6108 = args6106.length;
+switch (G__6108) {
 case 0:
 return dogfort.middleware.session.memory.memory_store.cljs$core$IFn$_invoke$arity$0();
 
@@ -87,7 +88,7 @@ return dogfort.middleware.session.memory.memory_store.cljs$core$IFn$_invoke$arit
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args3254.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args6106.length)].join('')));
 
 }
 });

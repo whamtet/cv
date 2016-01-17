@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.48 {:target :nodejs}
+// Compiled by ClojureScript 1.7.170 {:target :nodejs}
 goog.provide('dogfort.util.request');
 goog.require('cljs.core');
 goog.require('dogfort.util.parsing');
@@ -68,12 +68,12 @@ if(typeof dogfort.util.request.body_string !== 'undefined'){
 /**
  * Return the request body as a string.
  */
-dogfort.util.request.body_string = (function (){var method_table__1124__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var prefer_table__1125__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var method_cache__1126__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var cached_hierarchy__1127__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
-var hierarchy__1128__auto__ = cljs.core.get.call(null,cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),cljs.core.get_global_hierarchy.call(null));
-return (new cljs.core.MultiFn(cljs.core.symbol.call(null,"dogfort.util.request","body-string"),cljs.core.comp.call(null,dogfort.util.request.class$,new cljs.core.Keyword(null,"body","body",-2049205669)),new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__1128__auto__,method_table__1124__auto__,prefer_table__1125__auto__,method_cache__1126__auto__,cached_hierarchy__1127__auto__));
+dogfort.util.request.body_string = (function (){var method_table__1143__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var prefer_table__1144__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var method_cache__1145__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var cached_hierarchy__1146__auto__ = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
+var hierarchy__1147__auto__ = cljs.core.get.call(null,cljs.core.PersistentArrayMap.EMPTY,new cljs.core.Keyword(null,"hierarchy","hierarchy",-1053470341),cljs.core.get_global_hierarchy.call(null));
+return (new cljs.core.MultiFn(cljs.core.symbol.call(null,"dogfort.util.request","body-string"),cljs.core.comp.call(null,dogfort.util.request.class$,new cljs.core.Keyword(null,"body","body",-2049205669)),new cljs.core.Keyword(null,"default","default",-1987822328),hierarchy__1147__auto__,method_table__1143__auto__,prefer_table__1144__auto__,method_cache__1145__auto__,cached_hierarchy__1146__auto__));
 })();
 }
 /**
@@ -95,7 +95,7 @@ return new cljs.core.Keyword(null,"uri","uri",-774711847).cljs$core$IFn$_invoke$
 });
 /**
  * Associate a context and path-info with the  request. The request URI must be
- * a subpath of the supplied context.
+ *   a subpath of the supplied context.
  */
 dogfort.util.request.set_context = (function dogfort$util$request$set_context(request,context){
 if(cljs.core.truth_(dogfort.util.request.in_context_QMARK_.call(null,request,context))){

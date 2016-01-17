@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.48 {:target :nodejs}
+// Compiled by ClojureScript 1.7.170 {:target :nodejs}
 goog.provide('redlobster.io');
 goog.require('cljs.core');
 goog.require('redlobster.promise');
@@ -17,7 +17,7 @@ var p = redlobster.io.parse_url.call(null,path);
 return ((cljs.core._EQ_.call(null,"file:",p.protocol)) || (cljs.core.not.call(null,p.protocol))) && ((cljs.core._EQ_.call(null,"",p.host)) || (cljs.core.not.call(null,p.host)));
 });
 redlobster.io.slurp_http = (function redlobster$io$slurp_http(path){
-var res = redlobster.http.request.call(null,redlobster.io.url);
+var res = redlobster.http.request.call(null,path);
 return redlobster.promise.defer_until_realised.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [res], null),((function (res){
 return (function (){
 return redlobster.stream.read_stream.call(null,cljs.core.deref.call(null,res));
@@ -70,34 +70,34 @@ redlobster.io.spit_http = (function redlobster$io$spit_http(path,data){
 var o = redlobster.io.parse_url.call(null,path);
 path.method = "PUT";
 
-var promise__1408__auto__ = redlobster.promise.promise.call(null);
-var realise__1409__auto__ = ((function (promise__1408__auto__,o){
-return (function (promise__1408__auto____$1,value__1410__auto__){
-return redlobster.promise.realise.call(null,promise__1408__auto____$1,value__1410__auto__);
-});})(promise__1408__auto__,o))
+var promise__4443__auto__ = redlobster.promise.promise.call(null);
+var realise__4444__auto__ = ((function (promise__4443__auto__,o){
+return (function (promise__4443__auto____$1,value__4445__auto__){
+return redlobster.promise.realise.call(null,promise__4443__auto____$1,value__4445__auto__);
+});})(promise__4443__auto__,o))
 ;
-var realise_error__1411__auto__ = ((function (promise__1408__auto__,realise__1409__auto__,o){
-return (function (promise__1408__auto____$1,value__1410__auto__){
-return redlobster.promise.realise_error.call(null,promise__1408__auto____$1,value__1410__auto__);
-});})(promise__1408__auto__,realise__1409__auto__,o))
+var realise_error__4446__auto__ = ((function (promise__4443__auto__,realise__4444__auto__,o){
+return (function (promise__4443__auto____$1,value__4445__auto__){
+return redlobster.promise.realise_error.call(null,promise__4443__auto____$1,value__4445__auto__);
+});})(promise__4443__auto__,realise__4444__auto__,o))
 ;
-var realise = cljs.core.partial.call(null,realise__1409__auto__,promise__1408__auto__);
-var realise_error = cljs.core.partial.call(null,realise_error__1411__auto__,promise__1408__auto__);
-redlobster.promise.on_realised.call(null,redlobster.http.request.call(null,o,data),((function (promise__1408__auto__,realise__1409__auto__,realise_error__1411__auto__,realise,realise_error,o){
-return (function (p1__3037_SHARP_){
-if(cljs.core.truth_(redlobster.io.http_success_QMARK_.call(null,p1__3037_SHARP_))){
+var realise = cljs.core.partial.call(null,realise__4444__auto__,promise__4443__auto__);
+var realise_error = cljs.core.partial.call(null,realise_error__4446__auto__,promise__4443__auto__);
+redlobster.promise.on_realised.call(null,redlobster.http.request.call(null,o,data),((function (promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o){
+return (function (p1__4528_SHARP_){
+if(cljs.core.truth_(redlobster.io.http_success_QMARK_.call(null,p1__4528_SHARP_))){
 return realise.call(null,null);
 } else {
-return realise_error.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("redlobster.http","status-code","redlobster.http/status-code",-1286523828),p1__3037_SHARP_.statusCode], null));
+return realise_error.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("redlobster.http","status-code","redlobster.http/status-code",-1286523828),p1__4528_SHARP_.statusCode], null));
 }
-});})(promise__1408__auto__,realise__1409__auto__,realise_error__1411__auto__,realise,realise_error,o))
-,((function (promise__1408__auto__,realise__1409__auto__,realise_error__1411__auto__,realise,realise_error,o){
-return (function (p1__3038_SHARP_){
-return realise_error.call(null,p1__3038_SHARP_);
-});})(promise__1408__auto__,realise__1409__auto__,realise_error__1411__auto__,realise,realise_error,o))
+});})(promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o))
+,((function (promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o){
+return (function (p1__4529_SHARP_){
+return realise_error.call(null,p1__4529_SHARP_);
+});})(promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o))
 );
 
-return promise__1408__auto__;
+return promise__4443__auto__;
 });
 redlobster.io.spit_file = (function redlobster$io$spit_file(path,data){
 return redlobster.stream.write_stream.call(null,redlobster.stream.write_file.call(null,path),data);

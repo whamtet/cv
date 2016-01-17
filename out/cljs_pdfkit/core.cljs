@@ -1,7 +1,5 @@
 (ns cljs-pdfkit.core
   (:require
-   [cljs.nodejs :as nodejs]
-   [redlobster.stream :as stream]
    [cljs-pdfkit.optimize-dom :as optimize-dom]
    [cljs-pdfkit.util :as util]
    )
@@ -10,17 +8,18 @@
 
 (def PDFDocument (js/require "pdfkit"))
 
-(nodejs/enable-util-print!)
-
 (declare handle-tag)
 (declare draw-tag)
 (def default-stack [{:font "Helvetica" :font-size 12}])
 
+(defn print-through [x] (println x) x)
+
 (defn page
-  [doc page]
+  [doc page pdf-opts]
   (let [
         [page-tag opts & children] (optimize-dom/add-style page)
         _ (assert (= :page page-tag))
+        opts (merge opts (select-keys pdf-opts [:layout]))
         opts (clj->js opts)
         ]
     (.addPage doc opts)
@@ -32,20 +31,22 @@
   [:pdf opts & pages]
 
   opts takes the form
-
-  {:title \"Title of the Document\"
-  :author \"Author\"
-  :subject - \"Subject\"
-  :keywords - \"Keywords\"}
+  {:info
+    {:title \"Title of the Document\"
+     :author \"Author\"
+     :subject - \"Subject\"
+     :keywords - \"Keywords\"}
+   :layout \"landscape\"}
   "
   [dom]
   (let [
         [pdf-tag opts & children] (optimize-dom/add-style dom)
         _ (assert (= :pdf pdf-tag))
-        opts (clj->js {:info (util/capitalize-map opts) :autoFirstPage false})
-        doc (PDFDocument. opts)
+        opts (assoc (update-in opts [:info] util/capitalize-map) :autoFirstPage false)
+        doc (PDFDocument. (clj->js opts))
+        children (remove seq? (tree-seq seq? identity children))
         ]
-    (doseq [child children] (page doc child))
+    (doseq [child children] (page doc child opts))
     doc))
 
 (defn make-linear-gradient [doc {[x1 y1 x2 y2] :points stops :stops}]
@@ -76,7 +77,6 @@
 
 (defn handle-tag [doc stack [tag tag-opts & children :as v]]
   (let [
-        state-opts (select-keys tag-opts optimize-dom/root-properties)
         {:keys [fill-and-stroke linear-gradient radial-gradient fill dash translate rotate scale font font-size]} tag-opts
         stack-frame (select-keys tag-opts optimize-dom/root-properties2)
         new-stack (conj stack (merge (peek stack) stack-frame))
@@ -84,7 +84,7 @@
         ]
     ;;apply state
     (when save-stack? (apply-stack-frame doc stack-frame true))
-    (apply-state doc state-opts)
+    (apply-state doc tag-opts)
 
     ;;apply transformations
     (when dash (.dash doc (first dash) (clj->js (second dash))))
@@ -141,7 +141,7 @@ textAnnotation(x, y, width, height, text, options)")
 (defmethod draw-tag :rounded-rect [tag doc stack opts [x y width height corner-radius]]
   (.roundedRect doc x y width height corner-radius))
 (defmethod draw-tag :ellipse [tag doc stack opts [x y radius-x radius-y]]
-  (.ellipse doc x y radius-x radius-y))
+  (.ellipse doc x y radius-x (or radius-y radius-x)))
 (defmethod draw-tag :circle [tag doc stack opts [x y radius]]
   (.circle doc x y radius))
 (defmethod draw-tag :polygon [tag doc stack opts points]
@@ -151,7 +151,18 @@ textAnnotation(x, y, width, height, text, options)")
 (defmethod draw-tag :style [tag doc stack opts children]
   (doseq [child children]
     (handle-tag doc stack child)))
+
 (defmethod draw-tag :line [tag doc stack opts [x1 y1 x2 y2]]
   (.moveTo doc x1 y1)
   (.lineTo doc x2 y2))
 
+(defmethod draw-tag :quadratic-curve [tag doc stack opts [x1 y1 x2 y2 x3 y3]]
+  (.moveTo doc x1 y1)
+  (.quadraticCurveTo doc x2 y2 x3 y3))
+
+(defmethod draw-tag :bezier-curve [tag doc stack opts [x1 y1 x2 y2 x3 y3 x4 y4]]
+  (.moveTo doc x1 y1)
+  (.bezierCurveTo doc x2 y2 x3 y3 x4 y4))
+
+(defmethod draw-tag :default [tag]
+  (throw (js/Error. (str tag " tag not supported"))))

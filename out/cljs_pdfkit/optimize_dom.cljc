@@ -1,16 +1,13 @@
 (ns cljs-pdfkit.optimize-dom
   (:require
-   #?(:cljs [cljs.nodejs :as nodejs])
    [clojure.set :as set]
    ))
 
 ;;here we rearrange the dom to increase efficiency
 ;;and correctly apply fonts etc
 
-#?(:cljs (nodejs/enable-util-print!))
-
 (defn unravel-vector [v]
-  (vec (mapcat #(remove seq? (tree-seq seq? identity %)) v)))
+  (vec (mapcat #(remove (fn [x] (or (seq? x) (not x))) (tree-seq seq? identity %)) v)))
 
 (defn element-tag? [v]
   (and (vector? v) (keyword? (first v))))
@@ -74,6 +71,7 @@
                        :strike
                        :align
                        :fill :fill-and-stroke :linear-gradient :radial-gradient
+                       :continued
                        }) ;these must be transferred down into children
 
 (def static-properties #{:translate :rotate :scale}) ;do not shift these ones

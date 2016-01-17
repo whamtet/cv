@@ -1,22 +1,25 @@
-// Compiled by ClojureScript 1.7.48 {:target :nodejs}
+// Compiled by ClojureScript 1.7.170 {:target :nodejs}
 goog.provide('redlobster.promise');
 goog.require('cljs.core');
 goog.require('redlobster.events');
 
-redlobster.promise.IPromise = {};
+/**
+ * @interface
+ */
+redlobster.promise.IPromise = function(){};
 
 redlobster.promise.realised_QMARK_ = (function redlobster$promise$realised_QMARK_(this$){
 if((!((this$ == null))) && (!((this$.redlobster$promise$IPromise$realised_QMARK_$arity$1 == null)))){
 return this$.redlobster$promise$IPromise$realised_QMARK_$arity$1(this$);
 } else {
-var x__866__auto__ = (((this$ == null))?null:this$);
-var m__867__auto__ = (redlobster.promise.realised_QMARK_[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,this$);
+var x__885__auto__ = (((this$ == null))?null:this$);
+var m__886__auto__ = (redlobster.promise.realised_QMARK_[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,this$);
 } else {
-var m__867__auto____$1 = (redlobster.promise.realised_QMARK_["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,this$);
+var m__886__auto____$1 = (redlobster.promise.realised_QMARK_["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,this$);
 } else {
 throw cljs.core.missing_protocol.call(null,"IPromise.realised?",this$);
 }
@@ -28,14 +31,14 @@ redlobster.promise.failed_QMARK_ = (function redlobster$promise$failed_QMARK_(th
 if((!((this$ == null))) && (!((this$.redlobster$promise$IPromise$failed_QMARK_$arity$1 == null)))){
 return this$.redlobster$promise$IPromise$failed_QMARK_$arity$1(this$);
 } else {
-var x__866__auto__ = (((this$ == null))?null:this$);
-var m__867__auto__ = (redlobster.promise.failed_QMARK_[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,this$);
+var x__885__auto__ = (((this$ == null))?null:this$);
+var m__886__auto__ = (redlobster.promise.failed_QMARK_[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,this$);
 } else {
-var m__867__auto____$1 = (redlobster.promise.failed_QMARK_["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,this$);
+var m__886__auto____$1 = (redlobster.promise.failed_QMARK_["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,this$);
 } else {
 throw cljs.core.missing_protocol.call(null,"IPromise.failed?",this$);
 }
@@ -47,14 +50,14 @@ redlobster.promise.realise = (function redlobster$promise$realise(this$,value){
 if((!((this$ == null))) && (!((this$.redlobster$promise$IPromise$realise$arity$2 == null)))){
 return this$.redlobster$promise$IPromise$realise$arity$2(this$,value);
 } else {
-var x__866__auto__ = (((this$ == null))?null:this$);
-var m__867__auto__ = (redlobster.promise.realise[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,this$,value);
+var x__885__auto__ = (((this$ == null))?null:this$);
+var m__886__auto__ = (redlobster.promise.realise[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,this$,value);
 } else {
-var m__867__auto____$1 = (redlobster.promise.realise["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,this$,value);
+var m__886__auto____$1 = (redlobster.promise.realise["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,this$,value);
 } else {
 throw cljs.core.missing_protocol.call(null,"IPromise.realise",this$);
 }
@@ -66,14 +69,14 @@ redlobster.promise.realise_error = (function redlobster$promise$realise_error(th
 if((!((this$ == null))) && (!((this$.redlobster$promise$IPromise$realise_error$arity$2 == null)))){
 return this$.redlobster$promise$IPromise$realise_error$arity$2(this$,value);
 } else {
-var x__866__auto__ = (((this$ == null))?null:this$);
-var m__867__auto__ = (redlobster.promise.realise_error[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,this$,value);
+var x__885__auto__ = (((this$ == null))?null:this$);
+var m__886__auto__ = (redlobster.promise.realise_error[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,this$,value);
 } else {
-var m__867__auto____$1 = (redlobster.promise.realise_error["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,this$,value);
+var m__886__auto____$1 = (redlobster.promise.realise_error["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,this$,value);
 } else {
 throw cljs.core.missing_protocol.call(null,"IPromise.realise-error",this$);
 }
@@ -85,14 +88,14 @@ redlobster.promise.on_realised = (function redlobster$promise$on_realised(this$,
 if((!((this$ == null))) && (!((this$.redlobster$promise$IPromise$on_realised$arity$3 == null)))){
 return this$.redlobster$promise$IPromise$on_realised$arity$3(this$,on_success,on_error);
 } else {
-var x__866__auto__ = (((this$ == null))?null:this$);
-var m__867__auto__ = (redlobster.promise.on_realised[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,this$,on_success,on_error);
+var x__885__auto__ = (((this$ == null))?null:this$);
+var m__886__auto__ = (redlobster.promise.on_realised[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,this$,on_success,on_error);
 } else {
-var m__867__auto____$1 = (redlobster.promise.on_realised["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,this$,on_success,on_error);
+var m__886__auto____$1 = (redlobster.promise.on_realised["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,this$,on_success,on_error);
 } else {
 throw cljs.core.missing_protocol.call(null,"IPromise.on-realised",this$);
 }
@@ -118,6 +121,8 @@ return cljs.core.native_satisfies_QMARK_.call(null,redlobster.promise.IPromise,v
 
 /**
 * @constructor
+ * @implements {redlobster.promise.IPromise}
+ * @implements {cljs.core.IDeref}
 */
 redlobster.promise.Promise = (function (ee){
 this.ee = ee;
@@ -172,12 +177,12 @@ throw new cljs.core.Keyword("redlobster.promise","already-realised","redlobster.
 } else {
 if(cljs.core.truth_(redlobster.promise.promise_QMARK_.call(null,value))){
 return redlobster.promise.on_realised.call(null,value,((function (this$__$1){
-return (function (p1__2416_SHARP_){
-return redlobster.promise.realise.call(null,this$__$1,p1__2416_SHARP_);
+return (function (p1__4363_SHARP_){
+return redlobster.promise.realise.call(null,this$__$1,p1__4363_SHARP_);
 });})(this$__$1))
 ,((function (this$__$1){
-return (function (p1__2417_SHARP_){
-return redlobster.promise.realise_error.call(null,this$__$1,p1__2417_SHARP_);
+return (function (p1__4364_SHARP_){
+return redlobster.promise.realise_error.call(null,this$__$1,p1__4364_SHARP_);
 });})(this$__$1))
 );
 } else {
@@ -202,12 +207,12 @@ throw new cljs.core.Keyword("redlobster.promise","already-realised","redlobster.
 } else {
 if(cljs.core.truth_(redlobster.promise.promise_QMARK_.call(null,value))){
 return redlobster.promise.on_realised.call(null,value,((function (this$__$1){
-return (function (p1__2418_SHARP_){
-return redlobster.promise.realise.call(null,this$__$1,p1__2418_SHARP_);
+return (function (p1__4365_SHARP_){
+return redlobster.promise.realise.call(null,this$__$1,p1__4365_SHARP_);
 });})(this$__$1))
 ,((function (this$__$1){
-return (function (p1__2419_SHARP_){
-return redlobster.promise.realise_error.call(null,this$__$1,p1__2419_SHARP_);
+return (function (p1__4366_SHARP_){
+return redlobster.promise.realise_error.call(null,this$__$1,p1__4366_SHARP_);
 });})(this$__$1))
 );
 } else {
@@ -230,12 +235,12 @@ return on_error.call(null,cljs.core.deref.call(null,this$__$1));
 return on_success.call(null,cljs.core.deref.call(null,this$__$1));
 }
 } else {
-var G__2420 = self__.ee;
-redlobster.events.on.call(null,G__2420,new cljs.core.Keyword(null,"realise-success","realise-success",-1942827085),on_success);
+var G__4367 = self__.ee;
+redlobster.events.on.call(null,G__4367,new cljs.core.Keyword(null,"realise-success","realise-success",-1942827085),on_success);
 
-redlobster.events.on.call(null,G__2420,new cljs.core.Keyword(null,"realise-error","realise-error",402975089),on_error);
+redlobster.events.on.call(null,G__4367,new cljs.core.Keyword(null,"realise-error","realise-error",402975089),on_error);
 
-return G__2420;
+return G__4367;
 }
 });
 
@@ -247,32 +252,32 @@ redlobster.promise.Promise.cljs$lang$type = true;
 
 redlobster.promise.Promise.cljs$lang$ctorStr = "redlobster.promise/Promise";
 
-redlobster.promise.Promise.cljs$lang$ctorPrWriter = (function (this__809__auto__,writer__810__auto__,opt__811__auto__){
-return cljs.core._write.call(null,writer__810__auto__,"redlobster.promise/Promise");
+redlobster.promise.Promise.cljs$lang$ctorPrWriter = (function (this__828__auto__,writer__829__auto__,opt__830__auto__){
+return cljs.core._write.call(null,writer__829__auto__,"redlobster.promise/Promise");
 });
 
 redlobster.promise.__GT_Promise = (function redlobster$promise$__GT_Promise(ee){
 return (new redlobster.promise.Promise(ee));
 });
 
-redlobster.promise.promise = (function redlobster$promise$promise(){
-var args2421 = [];
-var len__1269__auto___2425 = arguments.length;
-var i__1270__auto___2426 = (0);
+redlobster.promise.promise = (function redlobster$promise$promise(var_args){
+var args4368 = [];
+var len__1288__auto___4372 = arguments.length;
+var i__1289__auto___4373 = (0);
 while(true){
-if((i__1270__auto___2426 < len__1269__auto___2425)){
-args2421.push((arguments[i__1270__auto___2426]));
+if((i__1289__auto___4373 < len__1288__auto___4372)){
+args4368.push((arguments[i__1289__auto___4373]));
 
-var G__2427 = (i__1270__auto___2426 + (1));
-i__1270__auto___2426 = G__2427;
+var G__4374 = (i__1289__auto___4373 + (1));
+i__1289__auto___4373 = G__4374;
 continue;
 } else {
 }
 break;
 }
 
-var G__2423 = args2421.length;
-switch (G__2423) {
+var G__4370 = args4368.length;
+switch (G__4370) {
 case 0:
 return redlobster.promise.promise.cljs$core$IFn$_invoke$arity$0();
 
@@ -282,7 +287,7 @@ return redlobster.promise.promise.cljs$core$IFn$_invoke$arity$1((arguments[(0)])
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args2421.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args4368.length)].join('')));
 
 }
 });
@@ -298,18 +303,18 @@ return ee;
 });
 
 redlobster.promise.promise.cljs$core$IFn$_invoke$arity$1 = (function (success_value){
-var G__2424 = redlobster.promise.promise.call(null);
-redlobster.promise.realise.call(null,G__2424,success_value);
+var G__4371 = redlobster.promise.promise.call(null);
+redlobster.promise.realise.call(null,G__4371,success_value);
 
-return G__2424;
+return G__4371;
 });
 
 redlobster.promise.promise.cljs$lang$maxFixedArity = 1;
 redlobster.promise.promise_fail = (function redlobster$promise$promise_fail(error_value){
-var G__2430 = redlobster.promise.promise.call(null);
-redlobster.promise.realise_error.call(null,G__2430,error_value);
+var G__4377 = redlobster.promise.promise.call(null);
+redlobster.promise.realise_error.call(null,G__4377,error_value);
 
-return G__2430;
+return G__4377;
 });
 /**
  * Takes a list of promises, and creates a promise that will realise as
@@ -322,24 +327,24 @@ return G__2430;
  * and realise itself with `:redlobster.promise/realised` regardless of the
  * success or failure of any promise.
  */
-redlobster.promise.await = (function redlobster$promise$await(){
-var args__1276__auto__ = [];
-var len__1269__auto___2436 = arguments.length;
-var i__1270__auto___2437 = (0);
+redlobster.promise.await = (function redlobster$promise$await(var_args){
+var args__1295__auto__ = [];
+var len__1288__auto___4383 = arguments.length;
+var i__1289__auto___4384 = (0);
 while(true){
-if((i__1270__auto___2437 < len__1269__auto___2436)){
-args__1276__auto__.push((arguments[i__1270__auto___2437]));
+if((i__1289__auto___4384 < len__1288__auto___4383)){
+args__1295__auto__.push((arguments[i__1289__auto___4384]));
 
-var G__2438 = (i__1270__auto___2437 + (1));
-i__1270__auto___2437 = G__2438;
+var G__4385 = (i__1289__auto___4384 + (1));
+i__1289__auto___4384 = G__4385;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__1277__auto__ = ((((0) < args__1276__auto__.length))?(new cljs.core.IndexedSeq(args__1276__auto__.slice((0)),(0))):null);
-return redlobster.promise.await.cljs$core$IFn$_invoke$arity$variadic(argseq__1277__auto__);
+var argseq__1296__auto__ = ((((0) < args__1295__auto__.length))?(new cljs.core.IndexedSeq(args__1295__auto__.slice((0)),(0))):null);
+return redlobster.promise.await.cljs$core$IFn$_invoke$arity$variadic(argseq__1296__auto__);
 });
 
 redlobster.promise.await.cljs$core$IFn$_invoke$arity$variadic = (function (promises){
@@ -349,14 +354,14 @@ var p = redlobster.promise.promise.call(null);
 var total = cljs.core.count.call(null,promises__$1);
 var count = cljs.core.atom.call(null,(0));
 var done = cljs.core.atom.call(null,false);
-var seq__2432_2439 = cljs.core.seq.call(null,promises__$1);
-var chunk__2433_2440 = null;
-var count__2434_2441 = (0);
-var i__2435_2442 = (0);
+var seq__4379_4386 = cljs.core.seq.call(null,promises__$1);
+var chunk__4380_4387 = null;
+var count__4381_4388 = (0);
+var i__4382_4389 = (0);
 while(true){
-if((i__2435_2442 < count__2434_2441)){
-var subp_2443 = cljs.core._nth.call(null,chunk__2433_2440,i__2435_2442);
-var succ_2444 = ((function (seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,subp_2443,await_all,promises__$1,p,total,count,done){
+if((i__4382_4389 < count__4381_4388)){
+var subp_4390 = cljs.core._nth.call(null,chunk__4380_4387,i__4382_4389);
+var succ_4391 = ((function (seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,subp_4390,await_all,promises__$1,p,total,count,done){
 return (function (_){
 if(cljs.core.not.call(null,cljs.core.deref.call(null,done))){
 cljs.core.swap_BANG_.call(null,count,cljs.core.inc);
@@ -371,9 +376,9 @@ return null;
 } else {
 return null;
 }
-});})(seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,subp_2443,await_all,promises__$1,p,total,count,done))
+});})(seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,subp_4390,await_all,promises__$1,p,total,count,done))
 ;
-var fail_2445 = ((await_all)?succ_2444:((function (seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,succ_2444,subp_2443,await_all,promises__$1,p,total,count,done){
+var fail_4392 = ((await_all)?succ_4391:((function (seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,succ_4391,subp_4390,await_all,promises__$1,p,total,count,done){
 return (function (err){
 if(cljs.core.not.call(null,cljs.core.deref.call(null,done))){
 cljs.core.reset_BANG_.call(null,done,true);
@@ -382,37 +387,37 @@ return redlobster.promise.realise_error.call(null,p,err);
 } else {
 return null;
 }
-});})(seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,succ_2444,subp_2443,await_all,promises__$1,p,total,count,done))
+});})(seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,succ_4391,subp_4390,await_all,promises__$1,p,total,count,done))
 );
-redlobster.promise.on_realised.call(null,subp_2443,succ_2444,fail_2445);
+redlobster.promise.on_realised.call(null,subp_4390,succ_4391,fail_4392);
 
-var G__2446 = seq__2432_2439;
-var G__2447 = chunk__2433_2440;
-var G__2448 = count__2434_2441;
-var G__2449 = (i__2435_2442 + (1));
-seq__2432_2439 = G__2446;
-chunk__2433_2440 = G__2447;
-count__2434_2441 = G__2448;
-i__2435_2442 = G__2449;
+var G__4393 = seq__4379_4386;
+var G__4394 = chunk__4380_4387;
+var G__4395 = count__4381_4388;
+var G__4396 = (i__4382_4389 + (1));
+seq__4379_4386 = G__4393;
+chunk__4380_4387 = G__4394;
+count__4381_4388 = G__4395;
+i__4382_4389 = G__4396;
 continue;
 } else {
-var temp__4425__auto___2450 = cljs.core.seq.call(null,seq__2432_2439);
-if(temp__4425__auto___2450){
-var seq__2432_2451__$1 = temp__4425__auto___2450;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__2432_2451__$1)){
-var c__1014__auto___2452 = cljs.core.chunk_first.call(null,seq__2432_2451__$1);
-var G__2453 = cljs.core.chunk_rest.call(null,seq__2432_2451__$1);
-var G__2454 = c__1014__auto___2452;
-var G__2455 = cljs.core.count.call(null,c__1014__auto___2452);
-var G__2456 = (0);
-seq__2432_2439 = G__2453;
-chunk__2433_2440 = G__2454;
-count__2434_2441 = G__2455;
-i__2435_2442 = G__2456;
+var temp__4425__auto___4397 = cljs.core.seq.call(null,seq__4379_4386);
+if(temp__4425__auto___4397){
+var seq__4379_4398__$1 = temp__4425__auto___4397;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__4379_4398__$1)){
+var c__1033__auto___4399 = cljs.core.chunk_first.call(null,seq__4379_4398__$1);
+var G__4400 = cljs.core.chunk_rest.call(null,seq__4379_4398__$1);
+var G__4401 = c__1033__auto___4399;
+var G__4402 = cljs.core.count.call(null,c__1033__auto___4399);
+var G__4403 = (0);
+seq__4379_4386 = G__4400;
+chunk__4380_4387 = G__4401;
+count__4381_4388 = G__4402;
+i__4382_4389 = G__4403;
 continue;
 } else {
-var subp_2457 = cljs.core.first.call(null,seq__2432_2451__$1);
-var succ_2458 = ((function (seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,subp_2457,seq__2432_2451__$1,temp__4425__auto___2450,await_all,promises__$1,p,total,count,done){
+var subp_4404 = cljs.core.first.call(null,seq__4379_4398__$1);
+var succ_4405 = ((function (seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,subp_4404,seq__4379_4398__$1,temp__4425__auto___4397,await_all,promises__$1,p,total,count,done){
 return (function (_){
 if(cljs.core.not.call(null,cljs.core.deref.call(null,done))){
 cljs.core.swap_BANG_.call(null,count,cljs.core.inc);
@@ -427,9 +432,9 @@ return null;
 } else {
 return null;
 }
-});})(seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,subp_2457,seq__2432_2451__$1,temp__4425__auto___2450,await_all,promises__$1,p,total,count,done))
+});})(seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,subp_4404,seq__4379_4398__$1,temp__4425__auto___4397,await_all,promises__$1,p,total,count,done))
 ;
-var fail_2459 = ((await_all)?succ_2458:((function (seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,succ_2458,subp_2457,seq__2432_2451__$1,temp__4425__auto___2450,await_all,promises__$1,p,total,count,done){
+var fail_4406 = ((await_all)?succ_4405:((function (seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,succ_4405,subp_4404,seq__4379_4398__$1,temp__4425__auto___4397,await_all,promises__$1,p,total,count,done){
 return (function (err){
 if(cljs.core.not.call(null,cljs.core.deref.call(null,done))){
 cljs.core.reset_BANG_.call(null,done,true);
@@ -438,18 +443,18 @@ return redlobster.promise.realise_error.call(null,p,err);
 } else {
 return null;
 }
-});})(seq__2432_2439,chunk__2433_2440,count__2434_2441,i__2435_2442,succ_2458,subp_2457,seq__2432_2451__$1,temp__4425__auto___2450,await_all,promises__$1,p,total,count,done))
+});})(seq__4379_4386,chunk__4380_4387,count__4381_4388,i__4382_4389,succ_4405,subp_4404,seq__4379_4398__$1,temp__4425__auto___4397,await_all,promises__$1,p,total,count,done))
 );
-redlobster.promise.on_realised.call(null,subp_2457,succ_2458,fail_2459);
+redlobster.promise.on_realised.call(null,subp_4404,succ_4405,fail_4406);
 
-var G__2460 = cljs.core.next.call(null,seq__2432_2451__$1);
-var G__2461 = null;
-var G__2462 = (0);
-var G__2463 = (0);
-seq__2432_2439 = G__2460;
-chunk__2433_2440 = G__2461;
-count__2434_2441 = G__2462;
-i__2435_2442 = G__2463;
+var G__4407 = cljs.core.next.call(null,seq__4379_4398__$1);
+var G__4408 = null;
+var G__4409 = (0);
+var G__4410 = (0);
+seq__4379_4386 = G__4407;
+chunk__4380_4387 = G__4408;
+count__4381_4388 = G__4409;
+i__4382_4389 = G__4410;
 continue;
 }
 } else {
@@ -463,8 +468,8 @@ return p;
 
 redlobster.promise.await.cljs$lang$maxFixedArity = (0);
 
-redlobster.promise.await.cljs$lang$applyTo = (function (seq2431){
-return redlobster.promise.await.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq2431));
+redlobster.promise.await.cljs$lang$applyTo = (function (seq4378){
+return redlobster.promise.await.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq4378));
 });
 redlobster.promise.defer_until_realised = (function redlobster$promise$defer_until_realised(promises,callback){
 var p = redlobster.promise.promise.call(null);

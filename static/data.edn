@@ -1,0 +1,92 @@
+;organization dates role place & achievements
+
+{:jobs [{:organization "Admiral Investment"
+         :dates "2014 - 2015"
+         :role "Assistant to the Chief Investment Officer"
+         :place "Hong Kong"
+         :achievements ["Responsible for the firm’s investment portfolio valuation suite (Octant)."
+                        "Automated stock analyst workflow to reduce the firm’s staffing requirements."
+                        "Taught other staff how to model real estate stocks."
+                        "Researched and collected financial data using web bots and commercial data providers."
+                        "Derived performance attribution formulae and reconstructed trading history."
+                        "Defined portfolio optimization model to guide stock selection."]}
+        {:organization "www.chunkmapper.com"
+         :dates "2013 - 2014"
+         :role "Founder and Lead Programmer"
+         :place "Brisbane, Australia"
+         :summary "Chunkmapper maps the world's infrastructure and natural features at high resolution.
+         It generates 3 dimensional maps hosted in Minecraft.  It has 4000 users, 200 of whom have upgraded to a commercial licence."
+         :url "http://www.chunkmapper.com"
+         :achievements ["Design and implementation of novel geospatial heuristics."
+                        "Design of http-based protocols to efficiently handle large datasets."
+                        "Implementation of online store and sales channels."
+                        "Providing customers with technical support."]}
+
+        {:organization "Revolution IT"
+         :dates "2013 - 2014"
+         :role "Testing Consultant"
+         :place "Brisbane, Australia"
+         :achievements ["Supported companies and government departments with the deployment and testing of organization wide IT solutions"
+                        "Developed in-house client scheduling tool"
+                        "Assisted company tenders for client projects"
+                        "Received industry standard accreditation, including ISTQB Foundation Certificate in Software Testing and British Computer Society Certificate in Business Analysis."]
+         }
+        {:organization "Credit Union Australia"
+         :dates "2013 - 2014"
+         :role "Consultant on behalf on Revolution IT"
+         :place "Brisbane, Australia"
+         :achievements ["Test consultant for core banking systems upgrade."
+                        "Assisted transition from development to business as usual phase."
+                        "Aggregated testing responsibilities from development team of 30 testers to smaller full time team of 5 staff, identifying priority areas for this team."
+                        "Started open source work on Excel-REPL (see projects section)."]}
+        {:organization "ILA Vietnam"
+         :dates "2011 - 2012"
+         :role "Teacher"
+         :place "Ho Chi Minh City, Vietnam"
+         :achievements ["Taught English to classes of 6 – 20 children or adults."
+                        "Examined students for class placement and course completion."]}
+        {:organization "The University of Auckland"
+         :dates "2010"
+         :role "Research Assistant"
+         :place "Auckland, New Zealand"
+         :achievements ["Analysed trends in cloud properties using satellite data."
+                        "Applied novel stereo-matching techniques to observe clouds with unprecedented accuracy."
+                        "Estimated impact of cloud changes with two dimensional climate model."
+                        "Coauthored results in Geophysics Research Letters with Professor Roger Davies (see publications)."
+                        "Research attracted international media attention from forbes.com and sciencedaily.com"]}
+        {:organization "The Australian National University"
+         :dates "2008 - 2009"
+         :role "Summer Research Scholar"
+         :place "Canberra, Australia"
+         :achievements ["Modelled behaviour of electrons trapped in a nuclear reactor."
+                        "Attended 22nd Canberra International Physics Summer School."]}
+        {:organization "Powerco Ltd"
+         :dates "2006 - 2007"
+         :role "Intranet Web Developer"
+         :place "New Plymouth, New Zealand"
+         :achievements ["Developed prototype company intranet using Microsoft Sharepoint."]}
+        ]
+ :projects [{:project "Chunkmapper"
+            :url "https://github.com/whamtet/chunkmapper"
+            :description "Chunkmapper integrates satellite and open source mapping data to generate 3D maps in Minecraft."
+            }
+           {:project "Dogfort"
+            :url "https://github.com/whamtet/dogfort"
+            :description "A functional wrapper for Node.js.  Dogfort demonstrates the elegance of functional programming on a web server.  Instead of writing to a mutable response object, developers pass immutable Clojurescript maps through a series of middleware.  Built with Bodil Stokke."
+            }
+           {:project "Chrome Webscraping Toolkit"
+            :url "https://github.com/whamtet/chrome-webscraping-toolkit"
+            :description "Chrome Webscraping Toolkit makes scraping data from websites fun.  When websites load content with complex AJAX or session management it can be easiest to store page data from a live session.  The toolkit hotloads code to enables iterative development within a single session."
+            }
+           {:project "Excel REPL"
+            :url "http://excel-repl.net"
+            :description "Excel REPL provides a general purpose programming environment to extend the capabilities of Microsoft Excel.  It is the only known tool which enables users to define their own Excel functions within the spreadsheet.  Users may also download data off the net and connect to databases."
+            }
+           {:project "cljs-PDFKit"
+            :url "https://github.com/whamtet/cljs-pdfkit"
+            :description "A declarative markup to generate PDFs in the browser or on Node.js.  cljs-PDFKit was used to generate this CV."
+            }
+           {:project "Anchor Value Investor"
+            :url "http://anchor-demo.net"
+            :description "Anchor makes it easy to analyse and compare company financials.  It can load data from commercial providers and use Artificial Intelligence to preread company filings.  It is currently being marketed to investment funds."
+            }]}

@@ -1,21 +1,24 @@
-// Compiled by ClojureScript 1.7.48 {:target :nodejs}
+// Compiled by ClojureScript 1.7.170 {:target :nodejs}
 goog.provide('redlobster.events');
 goog.require('cljs.core');
 
-redlobster.events.IEventEmitter = {};
+/**
+ * @interface
+ */
+redlobster.events.IEventEmitter = function(){};
 
 redlobster.events.on = (function redlobster$events$on(emitter,event,listener){
 if((!((emitter == null))) && (!((emitter.redlobster$events$IEventEmitter$on$arity$3 == null)))){
 return emitter.redlobster$events$IEventEmitter$on$arity$3(emitter,event,listener);
 } else {
-var x__866__auto__ = (((emitter == null))?null:emitter);
-var m__867__auto__ = (redlobster.events.on[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,emitter,event,listener);
+var x__885__auto__ = (((emitter == null))?null:emitter);
+var m__886__auto__ = (redlobster.events.on[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,emitter,event,listener);
 } else {
-var m__867__auto____$1 = (redlobster.events.on["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,emitter,event,listener);
+var m__886__auto____$1 = (redlobster.events.on["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,emitter,event,listener);
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventEmitter.on",emitter);
 }
@@ -27,14 +30,14 @@ redlobster.events.once = (function redlobster$events$once(emitter,event,listener
 if((!((emitter == null))) && (!((emitter.redlobster$events$IEventEmitter$once$arity$3 == null)))){
 return emitter.redlobster$events$IEventEmitter$once$arity$3(emitter,event,listener);
 } else {
-var x__866__auto__ = (((emitter == null))?null:emitter);
-var m__867__auto__ = (redlobster.events.once[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,emitter,event,listener);
+var x__885__auto__ = (((emitter == null))?null:emitter);
+var m__886__auto__ = (redlobster.events.once[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,emitter,event,listener);
 } else {
-var m__867__auto____$1 = (redlobster.events.once["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,emitter,event,listener);
+var m__886__auto____$1 = (redlobster.events.once["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,emitter,event,listener);
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventEmitter.once",emitter);
 }
@@ -46,14 +49,14 @@ redlobster.events.remove_listener = (function redlobster$events$remove_listener(
 if((!((emitter == null))) && (!((emitter.redlobster$events$IEventEmitter$remove_listener$arity$3 == null)))){
 return emitter.redlobster$events$IEventEmitter$remove_listener$arity$3(emitter,event,listener);
 } else {
-var x__866__auto__ = (((emitter == null))?null:emitter);
-var m__867__auto__ = (redlobster.events.remove_listener[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,emitter,event,listener);
+var x__885__auto__ = (((emitter == null))?null:emitter);
+var m__886__auto__ = (redlobster.events.remove_listener[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,emitter,event,listener);
 } else {
-var m__867__auto____$1 = (redlobster.events.remove_listener["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,emitter,event,listener);
+var m__886__auto____$1 = (redlobster.events.remove_listener["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,emitter,event,listener);
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventEmitter.remove-listener",emitter);
 }
@@ -65,14 +68,14 @@ redlobster.events.remove_all_listeners = (function redlobster$events$remove_all_
 if((!((emitter == null))) && (!((emitter.redlobster$events$IEventEmitter$remove_all_listeners$arity$1 == null)))){
 return emitter.redlobster$events$IEventEmitter$remove_all_listeners$arity$1(emitter);
 } else {
-var x__866__auto__ = (((emitter == null))?null:emitter);
-var m__867__auto__ = (redlobster.events.remove_all_listeners[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,emitter);
+var x__885__auto__ = (((emitter == null))?null:emitter);
+var m__886__auto__ = (redlobster.events.remove_all_listeners[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,emitter);
 } else {
-var m__867__auto____$1 = (redlobster.events.remove_all_listeners["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,emitter);
+var m__886__auto____$1 = (redlobster.events.remove_all_listeners["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,emitter);
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventEmitter.remove-all-listeners",emitter);
 }
@@ -84,14 +87,14 @@ redlobster.events.remove_all_listeners = (function redlobster$events$remove_all_
 if((!((emitter == null))) && (!((emitter.redlobster$events$IEventEmitter$remove_all_listeners$arity$2 == null)))){
 return emitter.redlobster$events$IEventEmitter$remove_all_listeners$arity$2(emitter,event);
 } else {
-var x__866__auto__ = (((emitter == null))?null:emitter);
-var m__867__auto__ = (redlobster.events.remove_all_listeners[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,emitter,event);
+var x__885__auto__ = (((emitter == null))?null:emitter);
+var m__886__auto__ = (redlobster.events.remove_all_listeners[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,emitter,event);
 } else {
-var m__867__auto____$1 = (redlobster.events.remove_all_listeners["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,emitter,event);
+var m__886__auto____$1 = (redlobster.events.remove_all_listeners["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,emitter,event);
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventEmitter.remove-all-listeners",emitter);
 }
@@ -103,14 +106,14 @@ redlobster.events.listeners = (function redlobster$events$listeners(emitter,even
 if((!((emitter == null))) && (!((emitter.redlobster$events$IEventEmitter$listeners$arity$2 == null)))){
 return emitter.redlobster$events$IEventEmitter$listeners$arity$2(emitter,event);
 } else {
-var x__866__auto__ = (((emitter == null))?null:emitter);
-var m__867__auto__ = (redlobster.events.listeners[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,emitter,event);
+var x__885__auto__ = (((emitter == null))?null:emitter);
+var m__886__auto__ = (redlobster.events.listeners[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,emitter,event);
 } else {
-var m__867__auto____$1 = (redlobster.events.listeners["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,emitter,event);
+var m__886__auto____$1 = (redlobster.events.listeners["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,emitter,event);
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventEmitter.listeners",emitter);
 }
@@ -122,14 +125,14 @@ redlobster.events.emit = (function redlobster$events$emit(emitter,event,data){
 if((!((emitter == null))) && (!((emitter.redlobster$events$IEventEmitter$emit$arity$3 == null)))){
 return emitter.redlobster$events$IEventEmitter$emit$arity$3(emitter,event,data);
 } else {
-var x__866__auto__ = (((emitter == null))?null:emitter);
-var m__867__auto__ = (redlobster.events.emit[goog.typeOf(x__866__auto__)]);
-if(!((m__867__auto__ == null))){
-return m__867__auto__.call(null,emitter,event,data);
+var x__885__auto__ = (((emitter == null))?null:emitter);
+var m__886__auto__ = (redlobster.events.emit[goog.typeOf(x__885__auto__)]);
+if(!((m__886__auto__ == null))){
+return m__886__auto__.call(null,emitter,event,data);
 } else {
-var m__867__auto____$1 = (redlobster.events.emit["_"]);
-if(!((m__867__auto____$1 == null))){
-return m__867__auto____$1.call(null,emitter,event,data);
+var m__886__auto____$1 = (redlobster.events.emit["_"]);
+if(!((m__886__auto____$1 == null))){
+return m__886__auto____$1.call(null,emitter,event,data);
 } else {
 throw cljs.core.missing_protocol.call(null,"IEventEmitter.emit",emitter);
 }
@@ -178,6 +181,7 @@ return cljs.core.assoc.call(null,this$,type,cljs.core.disj.call(null,listeners,l
 
 /**
 * @constructor
+ * @implements {redlobster.events.IEventEmitter}
 */
 redlobster.events.DefaultEventEmitter = (function (events){
 this.events = events;
@@ -214,8 +218,8 @@ redlobster.events.DefaultEventEmitter.prototype.redlobster$events$IEventEmitter$
 var self__ = this;
 var this$__$1 = this;
 return cljs.core.swap_BANG_.call(null,self__.events,((function (this$__$1){
-return (function (p1__2228_SHARP_){
-return cljs.core.dissoc.call(null,p1__2228_SHARP_,event);
+return (function (p1__4309_SHARP_){
+return cljs.core.dissoc.call(null,p1__4309_SHARP_,event);
 });})(this$__$1))
 );
 });
@@ -229,13 +233,13 @@ return cljs.core.get.call(null,cljs.core.deref.call(null,self__.events),event);
 redlobster.events.DefaultEventEmitter.prototype.redlobster$events$IEventEmitter$emit$arity$3 = (function (this$,event,data){
 var self__ = this;
 var this$__$1 = this;
-var seq__2229 = cljs.core.seq.call(null,redlobster.events.listeners.call(null,this$__$1,event));
-var chunk__2230 = null;
-var count__2231 = (0);
-var i__2232 = (0);
+var seq__4310 = cljs.core.seq.call(null,redlobster.events.listeners.call(null,this$__$1,event));
+var chunk__4311 = null;
+var count__4312 = (0);
+var i__4313 = (0);
 while(true){
-if((i__2232 < count__2231)){
-var listener = cljs.core._nth.call(null,chunk__2230,i__2232);
+if((i__4313 < count__4312)){
+var listener = cljs.core._nth.call(null,chunk__4311,i__4313);
 listener.call(null,data);
 
 if(cljs.core.truth_(listener.__redlobster_event_once)){
@@ -243,32 +247,32 @@ redlobster.events.remove_listener.call(null,this$__$1,event,listener);
 } else {
 }
 
-var G__2233 = seq__2229;
-var G__2234 = chunk__2230;
-var G__2235 = count__2231;
-var G__2236 = (i__2232 + (1));
-seq__2229 = G__2233;
-chunk__2230 = G__2234;
-count__2231 = G__2235;
-i__2232 = G__2236;
+var G__4314 = seq__4310;
+var G__4315 = chunk__4311;
+var G__4316 = count__4312;
+var G__4317 = (i__4313 + (1));
+seq__4310 = G__4314;
+chunk__4311 = G__4315;
+count__4312 = G__4316;
+i__4313 = G__4317;
 continue;
 } else {
-var temp__4425__auto__ = cljs.core.seq.call(null,seq__2229);
+var temp__4425__auto__ = cljs.core.seq.call(null,seq__4310);
 if(temp__4425__auto__){
-var seq__2229__$1 = temp__4425__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__2229__$1)){
-var c__1014__auto__ = cljs.core.chunk_first.call(null,seq__2229__$1);
-var G__2237 = cljs.core.chunk_rest.call(null,seq__2229__$1);
-var G__2238 = c__1014__auto__;
-var G__2239 = cljs.core.count.call(null,c__1014__auto__);
-var G__2240 = (0);
-seq__2229 = G__2237;
-chunk__2230 = G__2238;
-count__2231 = G__2239;
-i__2232 = G__2240;
+var seq__4310__$1 = temp__4425__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__4310__$1)){
+var c__1033__auto__ = cljs.core.chunk_first.call(null,seq__4310__$1);
+var G__4318 = cljs.core.chunk_rest.call(null,seq__4310__$1);
+var G__4319 = c__1033__auto__;
+var G__4320 = cljs.core.count.call(null,c__1033__auto__);
+var G__4321 = (0);
+seq__4310 = G__4318;
+chunk__4311 = G__4319;
+count__4312 = G__4320;
+i__4313 = G__4321;
 continue;
 } else {
-var listener = cljs.core.first.call(null,seq__2229__$1);
+var listener = cljs.core.first.call(null,seq__4310__$1);
 listener.call(null,data);
 
 if(cljs.core.truth_(listener.__redlobster_event_once)){
@@ -276,14 +280,14 @@ redlobster.events.remove_listener.call(null,this$__$1,event,listener);
 } else {
 }
 
-var G__2241 = cljs.core.next.call(null,seq__2229__$1);
-var G__2242 = null;
-var G__2243 = (0);
-var G__2244 = (0);
-seq__2229 = G__2241;
-chunk__2230 = G__2242;
-count__2231 = G__2243;
-i__2232 = G__2244;
+var G__4322 = cljs.core.next.call(null,seq__4310__$1);
+var G__4323 = null;
+var G__4324 = (0);
+var G__4325 = (0);
+seq__4310 = G__4322;
+chunk__4311 = G__4323;
+count__4312 = G__4324;
+i__4313 = G__4325;
 continue;
 }
 } else {
@@ -302,8 +306,8 @@ redlobster.events.DefaultEventEmitter.cljs$lang$type = true;
 
 redlobster.events.DefaultEventEmitter.cljs$lang$ctorStr = "redlobster.events/DefaultEventEmitter";
 
-redlobster.events.DefaultEventEmitter.cljs$lang$ctorPrWriter = (function (this__809__auto__,writer__810__auto__,opt__811__auto__){
-return cljs.core._write.call(null,writer__810__auto__,"redlobster.events/DefaultEventEmitter");
+redlobster.events.DefaultEventEmitter.cljs$lang$ctorPrWriter = (function (this__828__auto__,writer__829__auto__,opt__830__auto__){
+return cljs.core._write.call(null,writer__829__auto__,"redlobster.events/DefaultEventEmitter");
 });
 
 redlobster.events.__GT_DefaultEventEmitter = (function redlobster$events$__GT_DefaultEventEmitter(events){
@@ -370,11 +374,11 @@ return emitter__$1.emit(redlobster.events.unpack_event.call(null,event),data);
 ;
 });})(EventEmitter))
 ], null);
-}catch (e2246){if((e2246 instanceof Error)){
-var e = e2246;
+}catch (e4327){if((e4327 instanceof Error)){
+var e = e4327;
 return null;
 } else {
-throw e2246;
+throw e4327;
 
 }
 }}),(function redlobster$events$impl_default(){
@@ -384,17 +388,17 @@ return (new redlobster.events.DefaultEventEmitter(cljs.core.atom.call(null,cljs.
 return null;
 })], null);
 })], null);
-var emitter_2248 = cljs.core.some.call(null,(function (p1__2247_SHARP_){
-return p1__2247_SHARP_.call(null);
+var emitter_4329 = cljs.core.some.call(null,(function (p1__4328_SHARP_){
+return p1__4328_SHARP_.call(null);
 }),redlobster.events.implementations);
-if((emitter_2248 == null)){
+if((emitter_4329 == null)){
 throw (new Error("No supported EventEmitter found"));
 } else {
-redlobster.events.event_emitter = new cljs.core.Keyword(null,"constructor","constructor",-1953928811).cljs$core$IFn$_invoke$arity$1(emitter_2248);
+redlobster.events.event_emitter = new cljs.core.Keyword(null,"constructor","constructor",-1953928811).cljs$core$IFn$_invoke$arity$1(emitter_4329);
 
-redlobster.events.emitter_type = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(emitter_2248);
+redlobster.events.emitter_type = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(emitter_4329);
 
-new cljs.core.Keyword(null,"init","init",-1875481434).cljs$core$IFn$_invoke$arity$1(emitter_2248).call(null);
+new cljs.core.Keyword(null,"init","init",-1875481434).cljs$core$IFn$_invoke$arity$1(emitter_4329).call(null);
 }
 
 //# sourceMappingURL=events.js.map

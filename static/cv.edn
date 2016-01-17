@@ -1,0 +1,152 @@
+(let [
+      fonts {
+             "Garamond" "fonts/Garamond Regular.ttf"
+             "Calibri" "fonts/Calibri.ttf"
+             "Calibri Bold" "fonts/Calibri Bold.ttf"
+             "Calibri Italic" "fonts/Calibri Italic.ttf"
+             }
+
+      link (fn link
+             ([m url] (link m url url))
+             ([m url text]
+              [:text (merge m {:fill-color "blue" :link url :underline true}) text]))
+
+      section-header (fn [title y]
+                       (list
+                        [:text {:font (fonts "Garamond")
+                                :fill-color "gray" :font-size 10
+                                :character-spacing 1} (.toUpperCase title)]
+                        [:line {:stroke-color "gray"} 70 y 540 y]))
+
+      break [:text {:move-down true} ""]
+      page (fn [& contents]
+             [:page
+              [:style {:font (fonts "Calibri")}
+               contents]])
+
+      split-words
+      (fn split-words
+        [n s]
+        (cond
+         (empty? s) []
+         (<= (count s) n) [s]
+         :default
+         (let [
+               actual (re-find #".* " (.substring s 0 (inc n)))
+               ]
+           (cons actual (split-words n (.substring s (count actual)))))))
+
+      map-head (fn [f1 f2 s]
+                 (list*
+                  (f1 (first s))
+                  (map f2 (rest s))))
+
+      achievement
+      (fn [s]
+        (map-head
+         (fn [first-line]
+           [:text (apply str "•      " first-line)])
+         (fn [other-line]
+           [:text (apply str "     " other-line)])
+         (split-words 90 s)))
+
+      job (fn [{:keys [organization dates role place achievements summary url]}]
+            (let [
+                  organization-style
+                  (merge {:continued true
+                          :font (fonts "Calibri Bold")}
+                         (if url
+                           {:link url
+                            :fill-color "blue"}))
+                  ]
+              (list
+               [:text organization-style organization]
+               [:text {:align "right"} dates]
+               [:text {:continued true} role]
+               [:text {:align "right"} place]
+               break
+               (if summary
+                 (list
+                  [:text summary]
+                  break))
+               (map achievement achievements)
+               break
+               )))
+
+      simple-section
+      (fn [a b]
+        (list
+         [:text {:font (fonts "Calibri Bold")} a]
+         [:text b]))
+
+      project
+      (fn [{:keys [project url description]}]
+        (list
+         [:text {:font (fonts "Calibri Bold") :font-size 14} project]
+         (link {} url)
+         [:text description]
+         break
+         ))
+
+      ;;data is defined elsewhere
+      {:keys [jobs projects]} data
+      ]
+
+  [:pdf
+   {:info
+    {:title "Matthew Molloy CV"
+     :author "Matthew Molloy"
+     :keywords "Awesome"}}
+   (page
+
+    ;;title
+    [:text {:font-size 22 :align "center" :move-down true :font (fonts "Garamond") :character-spacing 3} "MATTHEW MOLLOY"]
+    (link {:align "right"} "matthew@molloy.hk")
+    (link {:align "right"} "http://matthew.molloy.hk")
+
+    break
+    (section-header "Summary" 186)
+    break
+    [:text "Software developer and data analyst with nine years experience in academic research, the public utilities sector and finance.  Creator of Chunkmapper and Excel-REPL."]
+    break
+    (section-header "Work Experience" 266)
+    break
+    (map job (take 2 jobs))
+    )
+   (page
+    (map job (take 4 (drop 2 jobs))))
+   (page
+    (map job (drop 6 jobs))
+    (section-header "Education" 274)
+    break
+    (simple-section
+     "Bachelor of Science (Honours) Physics"
+     "The University of Auckland, NZ, 2009")
+    (simple-section
+     "Bachelor of Science Physics and Mathematics"
+     "The University of Auckland, NZ, 2006 - 2008")
+    break
+    (section-header "Publications" 390)
+    break
+    [:text {:continued true} "Davies, R. and M. Molloy (2012), Global cloud height fluctuations measured by MISR on Terra from 2000 to 2010, "]
+    [:text {:continued true :font (fonts "Calibri Italic")} "Geophys. Res. Lett., "]
+    [:text {:continued true} "39, L03701, "]
+    (link {} "https://www.google.com.hk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=doi%2010.1029%2F2011GL050506" "doi:10.1029/2011GL050506.")
+    break
+    (section-header "Certifications" 470)
+    break
+    (simple-section
+     "Foundation Certificate in Business Analysis"
+     "The British Computer Society, 2013")
+    (simple-section
+     "ISTQB Foundation Certificate in Software Testing"
+     "Australia New Zealand Testing Board, 2012")
+    (simple-section
+     "Certificate in Teaching English to Adults (CELTA)"
+     "University of Cambridge, 2011")
+    break)
+   (page
+    (section-header "Selected Software Projects" 84)
+    [:text {:move-down true :font-size 8} ""]
+    (map project projects))
+   ])
