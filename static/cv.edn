@@ -32,7 +32,9 @@
          (<= (count s) n) [s]
          :default
          (let [
-               actual (re-find #".* " (.substring s 0 (inc n)))
+               actual (or
+                       (re-find #".* " (.substring s 0 (inc n)))
+                       (re-find #".*? " s))
                ]
            (cons actual (split-words n (.substring s (count actual)))))))
 
