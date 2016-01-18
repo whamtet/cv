@@ -31,15 +31,9 @@
     <script>
 
       var timeout;
-      var init_call = true;
       var delayF = function(f) {
-        if (init_call) {
-          init_call = false;
-          f()
-        } else {
-          clearTimeout(timeout)
-          timeout = setTimeout(f, 500)
-        }
+        clearTimeout(timeout)
+        timeout = setTimeout(f, 500)
       }
 
       var setText = function(text) { editor.setValue(text, 1)}
