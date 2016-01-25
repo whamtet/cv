@@ -1,8 +1,8 @@
-= CV
+# CV
 
 My CV.  Built with [Dogfort](https://github.com/whamtet/dogfort) and [cljs-PDFKit](https://github.com/whamtet/cljs-pdfkit).
 
-== Building
+## Building
 
 ```bash
 mv package.json p.json #hack
