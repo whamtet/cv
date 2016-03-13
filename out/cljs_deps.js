@@ -5,7 +5,7 @@ goog.addDependency("../redlobster/promise.js", ['redlobster.promise'], ['cljs.co
 goog.addDependency("../dogfort/middleware/session/store.js", ['dogfort.middleware.session.store'], ['cljs.core']);
 goog.addDependency("../dogfort/middleware/session/memory.js", ['dogfort.middleware.session.memory'], ['cljs.core', 'dogfort.middleware.session.store']);
 goog.addDependency("../dogfort/util/data.js", ['dogfort.util.data'], ['cljs.core']);
-goog.addDependency("../7A22349.js", ['cljs.nodejs'], ['cljs.core']);
+goog.addDependency("../1308C12.js", ['cljs.nodejs'], ['cljs.core']);
 goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
 goog.addDependency("../dogfort/util/codec.js", ['dogfort.util.codec'], ['dogfort.util.data', 'cljs.core', 'cljs.nodejs', 'clojure.string']);
 goog.addDependency("../dogfort/middleware/cookies.js", ['dogfort.middleware.cookies'], ['redlobster.promise', 'cljs.core', 'dogfort.util.codec', 'clojure.string']);
@@ -28,6 +28,7 @@ goog.addDependency("../dogfort/middleware/defaults.js", ['dogfort.middleware.def
 goog.addDependency("../dogfort/util/response.js", ['dogfort.util.response'], ['cljs.core']);
 goog.addDependency("../dogfort/middleware/routes.js", ['dogfort.middleware.routes'], ['redlobster.promise', 'cljs.node', 'cljs.core', 'dogfort.util.codec', 'dogfort.util.response']);
 goog.addDependency("../dogfort/http.js", ['dogfort.http'], ['redlobster.promise', 'cljs.node', 'redlobster.stream', 'cljs.core', 'dogfort.util.response', 'redlobster.events']);
+goog.addDependency("../cljs/pprint.js", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'clojure.string']);
 goog.addDependency("../cljs_pdfkit/util.js", ['cljs_pdfkit.util'], ['cljs.core']);
 goog.addDependency("../clojure/set.js", ['clojure.set'], ['cljs.core']);
 goog.addDependency("../cljs_pdfkit/optimize_dom.js", ['cljs_pdfkit.optimize_dom'], ['cljs.core', 'clojure.set']);
@@ -46,6 +47,6 @@ goog.addDependency("../cljs/compiler.js", ['cljs.compiler'], ['cljs.tools.reader
 goog.addDependency("../cljs/js.js", ['cljs.js'], ['cljs.compiler', 'cljs.tools.reader', 'cljs.core', 'goog.crypt.base64', 'cljs.tools.reader.reader_types', 'cljs.env', 'goog.string.StringBuffer', 'cljs.tagged_literals', 'cljs.analyzer', 'cljs.source_map', 'clojure.string']);
 goog.addDependency("../clojure/walk.js", ['clojure.walk'], ['cljs.core']);
 goog.addDependency("../cv/job.js", ['cv.job'], ['redlobster.io', 'redlobster.promise', 'cljs_pdfkit.core', 'cljs.tools.reader', 'cljs.js', 'cljs.core', 'cljs.tagged_literals', 'clojure.string', 'clojure.walk']);
-goog.addDependency("../cv/core.js", ['cv.core'], ['redlobster.promise', 'dogfort.middleware.defaults', 'redlobster.stream', 'cljs.core', 'dogfort.middleware.routes', 'cljs.nodejs', 'dogfort.http', 'cv.job', 'cljs.reader']);
+goog.addDependency("../cv/core.js", ['cv.core'], ['redlobster.promise', 'dogfort.middleware.defaults', 'redlobster.stream', 'cljs.core', 'dogfort.middleware.routes', 'cljs.nodejs', 'dogfort.http', 'cljs.pprint', 'cv.job', 'cljs.reader']);
 goog.addDependency("../cljs/core$macros.js", ['cljs.core$macros'], ['cljs.compiler', 'cljs.core', 'cljs.env', 'clojure.set', 'cljs.analyzer', 'clojure.string', 'clojure.walk']);
 goog.addDependency("../BCE03FE.js", ['cljs.nodejscli'], ['cljs.core', 'cljs.nodejs']);

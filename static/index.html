@@ -30,6 +30,15 @@
     </script>
     <script>
 
+      var showJobs = location.search.indexOf('jobs') != -1
+      var editorFrame = document.getElementById('editor')
+      var iframe = document.getElementById('frame')
+
+      if (showJobs) {
+        editorFrame.style.width = '100%'
+        iframe.style.display = 'none'
+      }
+
       var timeout;
       var delayF = function(f) {
         clearTimeout(timeout)
@@ -55,7 +64,7 @@
             //this.response is what you're looking for
             f(this.responseText)
           } else {
-            console.log('got status', this.status)
+            //console.log('got status', this.status)
           }
         }
         xhr.open('POST', url, true);
@@ -75,11 +84,25 @@
         })
       };
 
-      editor.on("change", function(x) {
-        delayF(refreshPdf)
-      })
+      var updateJobs = function() {
+        var text = editor.getValue()
+        var params = 'edn=' + escape(text)
+        post('/update-jobs', params, function() {})
+      }
 
-      get('/cv.edn', function(x) {setText(x)});
+      if (!showJobs) {
+        editor.on("change", function(x) {
+          delayF(refreshPdf)
+        })
+      } else {
+        editor.on("change", updateJobs)
+      }
+
+      if (!showJobs) {
+        get('/cv.edn', function(x) {setText(x)});
+      } else {
+        get('/jobs', function(x) {setText(x)});
+      }
 
     </script>
   </body>

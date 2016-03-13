@@ -17,14 +17,14 @@ return null;
 });
 dogfort.middleware.session.bare_session_request = (function dogfort$middleware$session$bare_session_request(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___11093 = arguments.length;
-var i__1289__auto___11094 = (0);
+var len__1288__auto___7478 = arguments.length;
+var i__1289__auto___7479 = (0);
 while(true){
-if((i__1289__auto___11094 < len__1288__auto___11093)){
-args__1295__auto__.push((arguments[i__1289__auto___11094]));
+if((i__1289__auto___7479 < len__1288__auto___7478)){
+args__1295__auto__.push((arguments[i__1289__auto___7479]));
 
-var G__11095 = (i__1289__auto___11094 + (1));
-i__1289__auto___11094 = G__11095;
+var G__7480 = (i__1289__auto___7479 + (1));
+i__1289__auto___7479 = G__7480;
 continue;
 } else {
 }
@@ -35,12 +35,12 @@ var argseq__1296__auto__ = ((((1) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.middleware.session.bare_session_request.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__1296__auto__);
 });
 
-dogfort.middleware.session.bare_session_request.cljs$core$IFn$_invoke$arity$variadic = (function (request,p__11089){
-var vec__11090 = p__11089;
-var map__11091 = cljs.core.nth.call(null,vec__11090,(0),null);
-var map__11091__$1 = ((((!((map__11091 == null)))?((((map__11091.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11091.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11091):map__11091);
-var store = cljs.core.get.call(null,map__11091__$1,new cljs.core.Keyword(null,"store","store",1512230022));
-var cookie_name = cljs.core.get.call(null,map__11091__$1,new cljs.core.Keyword(null,"cookie-name","cookie-name",1560376745));
+dogfort.middleware.session.bare_session_request.cljs$core$IFn$_invoke$arity$variadic = (function (request,p__7474){
+var vec__7475 = p__7474;
+var map__7476 = cljs.core.nth.call(null,vec__7475,(0),null);
+var map__7476__$1 = ((((!((map__7476 == null)))?((((map__7476.cljs$lang$protocol_mask$partition0$ & (64))) || (map__7476.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__7476):map__7476);
+var store = cljs.core.get.call(null,map__7476__$1,new cljs.core.Keyword(null,"store","store",1512230022));
+var cookie_name = cljs.core.get.call(null,map__7476__$1,new cljs.core.Keyword(null,"cookie-name","cookie-name",1560376745));
 var req_key = cljs.core.get_in.call(null,request,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"cookies","cookies",1839416329),cookie_name,new cljs.core.Keyword(null,"value","value",305978217)], null));
 var session = dogfort.middleware.session.store.read_session.call(null,store,req_key);
 var session_key = (cljs.core.truth_(session)?req_key:null);
@@ -55,10 +55,10 @@ return cljs.core.PersistentArrayMap.EMPTY;
 
 dogfort.middleware.session.bare_session_request.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.session.bare_session_request.cljs$lang$applyTo = (function (seq11087){
-var G__11088 = cljs.core.first.call(null,seq11087);
-var seq11087__$1 = cljs.core.next.call(null,seq11087);
-return dogfort.middleware.session.bare_session_request.cljs$core$IFn$_invoke$arity$variadic(G__11088,seq11087__$1);
+dogfort.middleware.session.bare_session_request.cljs$lang$applyTo = (function (seq7472){
+var G__7473 = cljs.core.first.call(null,seq7472);
+var seq7472__$1 = cljs.core.next.call(null,seq7472);
+return dogfort.middleware.session.bare_session_request.cljs$core$IFn$_invoke$arity$variadic(G__7473,seq7472__$1);
 });
 /**
  * Reads current HTTP session map and adds it to :session key of the request.
@@ -66,14 +66,14 @@ return dogfort.middleware.session.bare_session_request.cljs$core$IFn$_invoke$ari
  */
 dogfort.middleware.session.session_request = (function dogfort$middleware$session$session_request(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___11100 = arguments.length;
-var i__1289__auto___11101 = (0);
+var len__1288__auto___7485 = arguments.length;
+var i__1289__auto___7486 = (0);
 while(true){
-if((i__1289__auto___11101 < len__1288__auto___11100)){
-args__1295__auto__.push((arguments[i__1289__auto___11101]));
+if((i__1289__auto___7486 < len__1288__auto___7485)){
+args__1295__auto__.push((arguments[i__1289__auto___7486]));
 
-var G__11102 = (i__1289__auto___11101 + (1));
-i__1289__auto___11101 = G__11102;
+var G__7487 = (i__1289__auto___7486 + (1));
+i__1289__auto___7486 = G__7487;
 continue;
 } else {
 }
@@ -84,29 +84,29 @@ var argseq__1296__auto__ = ((((1) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.middleware.session.session_request.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__1296__auto__);
 });
 
-dogfort.middleware.session.session_request.cljs$core$IFn$_invoke$arity$variadic = (function (request,p__11098){
-var vec__11099 = p__11098;
-var options = cljs.core.nth.call(null,vec__11099,(0),null);
+dogfort.middleware.session.session_request.cljs$core$IFn$_invoke$arity$variadic = (function (request,p__7483){
+var vec__7484 = p__7483;
+var options = cljs.core.nth.call(null,vec__7484,(0),null);
 return dogfort.middleware.session.bare_session_request.call(null,dogfort.middleware.cookies.cookies_request.call(null,request),options);
 });
 
 dogfort.middleware.session.session_request.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.session.session_request.cljs$lang$applyTo = (function (seq11096){
-var G__11097 = cljs.core.first.call(null,seq11096);
-var seq11096__$1 = cljs.core.next.call(null,seq11096);
-return dogfort.middleware.session.session_request.cljs$core$IFn$_invoke$arity$variadic(G__11097,seq11096__$1);
+dogfort.middleware.session.session_request.cljs$lang$applyTo = (function (seq7481){
+var G__7482 = cljs.core.first.call(null,seq7481);
+var seq7481__$1 = cljs.core.next.call(null,seq7481);
+return dogfort.middleware.session.session_request.cljs$core$IFn$_invoke$arity$variadic(G__7482,seq7481__$1);
 });
 dogfort.middleware.session.bare_session_response = (function dogfort$middleware$session$bare_session_response(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___11113 = arguments.length;
-var i__1289__auto___11114 = (0);
+var len__1288__auto___7498 = arguments.length;
+var i__1289__auto___7499 = (0);
 while(true){
-if((i__1289__auto___11114 < len__1288__auto___11113)){
-args__1295__auto__.push((arguments[i__1289__auto___11114]));
+if((i__1289__auto___7499 < len__1288__auto___7498)){
+args__1295__auto__.push((arguments[i__1289__auto___7499]));
 
-var G__11115 = (i__1289__auto___11114 + (1));
-i__1289__auto___11114 = G__11115;
+var G__7500 = (i__1289__auto___7499 + (1));
+i__1289__auto___7499 = G__7500;
 continue;
 } else {
 }
@@ -117,16 +117,16 @@ var argseq__1296__auto__ = ((((2) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.middleware.session.bare_session_response.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__1296__auto__);
 });
 
-dogfort.middleware.session.bare_session_response.cljs$core$IFn$_invoke$arity$variadic = (function (response,p__11106,p__11107){
-var map__11108 = p__11106;
-var map__11108__$1 = ((((!((map__11108 == null)))?((((map__11108.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11108.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11108):map__11108);
-var session_key = cljs.core.get.call(null,map__11108__$1,new cljs.core.Keyword("session","key","session/key",756123603));
-var vec__11109 = p__11107;
-var map__11110 = cljs.core.nth.call(null,vec__11109,(0),null);
-var map__11110__$1 = ((((!((map__11110 == null)))?((((map__11110.cljs$lang$protocol_mask$partition0$ & (64))) || (map__11110.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__11110):map__11110);
-var store = cljs.core.get.call(null,map__11110__$1,new cljs.core.Keyword(null,"store","store",1512230022));
-var cookie_name = cljs.core.get.call(null,map__11110__$1,new cljs.core.Keyword(null,"cookie-name","cookie-name",1560376745));
-var cookie_attrs = cljs.core.get.call(null,map__11110__$1,new cljs.core.Keyword(null,"cookie-attrs","cookie-attrs",-1318966946));
+dogfort.middleware.session.bare_session_response.cljs$core$IFn$_invoke$arity$variadic = (function (response,p__7491,p__7492){
+var map__7493 = p__7491;
+var map__7493__$1 = ((((!((map__7493 == null)))?((((map__7493.cljs$lang$protocol_mask$partition0$ & (64))) || (map__7493.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__7493):map__7493);
+var session_key = cljs.core.get.call(null,map__7493__$1,new cljs.core.Keyword("session","key","session/key",756123603));
+var vec__7494 = p__7492;
+var map__7495 = cljs.core.nth.call(null,vec__7494,(0),null);
+var map__7495__$1 = ((((!((map__7495 == null)))?((((map__7495.cljs$lang$protocol_mask$partition0$ & (64))) || (map__7495.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__7495):map__7495);
+var store = cljs.core.get.call(null,map__7495__$1,new cljs.core.Keyword(null,"store","store",1512230022));
+var cookie_name = cljs.core.get.call(null,map__7495__$1,new cljs.core.Keyword(null,"cookie-name","cookie-name",1560376745));
+var cookie_attrs = cljs.core.get.call(null,map__7495__$1,new cljs.core.Keyword(null,"cookie-attrs","cookie-attrs",-1318966946));
 var new_session_key = ((cljs.core.contains_QMARK_.call(null,response,new cljs.core.Keyword(null,"session","session",1008279103)))?(function (){var temp__4423__auto__ = response.call(null,new cljs.core.Keyword(null,"session","session",1008279103));
 if(cljs.core.truth_(temp__4423__auto__)){
 var session = temp__4423__auto__;
@@ -185,26 +185,26 @@ return response__$1;
 
 dogfort.middleware.session.bare_session_response.cljs$lang$maxFixedArity = (2);
 
-dogfort.middleware.session.bare_session_response.cljs$lang$applyTo = (function (seq11103){
-var G__11104 = cljs.core.first.call(null,seq11103);
-var seq11103__$1 = cljs.core.next.call(null,seq11103);
-var G__11105 = cljs.core.first.call(null,seq11103__$1);
-var seq11103__$2 = cljs.core.next.call(null,seq11103__$1);
-return dogfort.middleware.session.bare_session_response.cljs$core$IFn$_invoke$arity$variadic(G__11104,G__11105,seq11103__$2);
+dogfort.middleware.session.bare_session_response.cljs$lang$applyTo = (function (seq7488){
+var G__7489 = cljs.core.first.call(null,seq7488);
+var seq7488__$1 = cljs.core.next.call(null,seq7488);
+var G__7490 = cljs.core.first.call(null,seq7488__$1);
+var seq7488__$2 = cljs.core.next.call(null,seq7488__$1);
+return dogfort.middleware.session.bare_session_response.cljs$core$IFn$_invoke$arity$variadic(G__7489,G__7490,seq7488__$2);
 });
 /**
  * Updates session based on :session key in response. See: wrap-session.
  */
 dogfort.middleware.session.session_response = (function dogfort$middleware$session$session_response(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___11121 = arguments.length;
-var i__1289__auto___11122 = (0);
+var len__1288__auto___7506 = arguments.length;
+var i__1289__auto___7507 = (0);
 while(true){
-if((i__1289__auto___11122 < len__1288__auto___11121)){
-args__1295__auto__.push((arguments[i__1289__auto___11122]));
+if((i__1289__auto___7507 < len__1288__auto___7506)){
+args__1295__auto__.push((arguments[i__1289__auto___7507]));
 
-var G__11123 = (i__1289__auto___11122 + (1));
-i__1289__auto___11122 = G__11123;
+var G__7508 = (i__1289__auto___7507 + (1));
+i__1289__auto___7507 = G__7508;
 continue;
 } else {
 }
@@ -215,25 +215,25 @@ var argseq__1296__auto__ = ((((2) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.middleware.session.session_response.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__1296__auto__);
 });
 
-dogfort.middleware.session.session_response.cljs$core$IFn$_invoke$arity$variadic = (function (response,request,p__11119){
-var vec__11120 = p__11119;
-var options = cljs.core.nth.call(null,vec__11120,(0),null);
+dogfort.middleware.session.session_response.cljs$core$IFn$_invoke$arity$variadic = (function (response,request,p__7504){
+var vec__7505 = p__7504;
+var options = cljs.core.nth.call(null,vec__7505,(0),null);
 var response__$1 = response;
-return redlobster.promise.defer_until_realised.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [response__$1], null),((function (response__$1,vec__11120,options){
+return redlobster.promise.defer_until_realised.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [response__$1], null),((function (response__$1,vec__7505,options){
 return (function (){
 return dogfort.middleware.session.bare_session_response.call(null,cljs.core.deref.call(null,response__$1),request,options);
-});})(response__$1,vec__11120,options))
+});})(response__$1,vec__7505,options))
 );
 });
 
 dogfort.middleware.session.session_response.cljs$lang$maxFixedArity = (2);
 
-dogfort.middleware.session.session_response.cljs$lang$applyTo = (function (seq11116){
-var G__11117 = cljs.core.first.call(null,seq11116);
-var seq11116__$1 = cljs.core.next.call(null,seq11116);
-var G__11118 = cljs.core.first.call(null,seq11116__$1);
-var seq11116__$2 = cljs.core.next.call(null,seq11116__$1);
-return dogfort.middleware.session.session_response.cljs$core$IFn$_invoke$arity$variadic(G__11117,G__11118,seq11116__$2);
+dogfort.middleware.session.session_response.cljs$lang$applyTo = (function (seq7501){
+var G__7502 = cljs.core.first.call(null,seq7501);
+var seq7501__$1 = cljs.core.next.call(null,seq7501);
+var G__7503 = cljs.core.first.call(null,seq7501__$1);
+var seq7501__$2 = cljs.core.next.call(null,seq7501__$1);
+return dogfort.middleware.session.session_response.cljs$core$IFn$_invoke$arity$variadic(G__7502,G__7503,seq7501__$2);
 });
 /**
  * Reads in the current HTTP session map, and adds it to the :session key on
@@ -259,23 +259,23 @@ return dogfort.middleware.session.session_response.cljs$core$IFn$_invoke$arity$v
  *                Defaults to {:http-only true}.
  */
 dogfort.middleware.session.wrap_session = (function dogfort$middleware$session$wrap_session(var_args){
-var args11124 = [];
-var len__1288__auto___11127 = arguments.length;
-var i__1289__auto___11128 = (0);
+var args7509 = [];
+var len__1288__auto___7512 = arguments.length;
+var i__1289__auto___7513 = (0);
 while(true){
-if((i__1289__auto___11128 < len__1288__auto___11127)){
-args11124.push((arguments[i__1289__auto___11128]));
+if((i__1289__auto___7513 < len__1288__auto___7512)){
+args7509.push((arguments[i__1289__auto___7513]));
 
-var G__11129 = (i__1289__auto___11128 + (1));
-i__1289__auto___11128 = G__11129;
+var G__7514 = (i__1289__auto___7513 + (1));
+i__1289__auto___7513 = G__7514;
 continue;
 } else {
 }
 break;
 }
 
-var G__11126 = args11124.length;
-switch (G__11126) {
+var G__7511 = args7509.length;
+switch (G__7511) {
 case 1:
 return dogfort.middleware.session.wrap_session.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -285,7 +285,7 @@ return dogfort.middleware.session.wrap_session.cljs$core$IFn$_invoke$arity$2((ar
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args11124.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args7509.length)].join('')));
 
 }
 });

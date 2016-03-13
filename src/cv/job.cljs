@@ -18,11 +18,15 @@
     (string/replace s #"[ \n]{3,}" "  ")
     s))
 
+(def data (atom {}))
 (let-realised [s (slurp "static/data.edn")]
-              (def data (walk/postwalk my-walk (read-string @s))))
+              (reset! data (walk/postwalk my-walk (read-string @s))))
 
 (def st (cljs/empty-state))
 (def jobs (atom {}))
+
+(defn set-jobs! [new-jobs]
+  (swap! data assoc :jobs (read-cljs new-jobs)))
 
 (defn my-eval [{:keys [source]}]
   (try
@@ -39,7 +43,7 @@
         ]
     (cljs/eval
      st
-     `(~'let [~'data ~data] ~(read-cljs s))
+     `(~'let [~'data ~(deref data)] ~(read-cljs s))
      {:eval my-eval
       :ns 'cljs.core
       }

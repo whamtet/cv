@@ -79,7 +79,7 @@
             :description "Chrome Webscraping Toolkit makes scraping data from websites fun.  When websites load content with complex AJAX or session management it can be easiest to store page data from a live session.  The toolkit hotloads code to enables iterative development within a single session."
             }
            {:project "Excel REPL"
-            :url "http://excel-repl.net"
+            :url "https://github.com/whamtet/excel-repl"
             :description "Excel REPL provides a general purpose programming environment to extend the capabilities of Microsoft Excel.  It is the only known tool which enables users to define their own Excel functions within the spreadsheet.  Users may also download data off the net and connect to databases."
             }
            {:project "cljs-PDFKit"

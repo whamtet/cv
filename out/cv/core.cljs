@@ -11,6 +11,7 @@
             [dogfort.middleware.routes :refer [not-found]]
             cljs.reader
             [cv.job :as job]
+            [cljs.pprint :refer [pprint]]
             ))
 
 (cljs.nodejs/enable-util-print!)
@@ -22,6 +23,10 @@
 
 (defroutes handler
   (ANY "/test" [] (pr-str @job/jobs))
+  (ANY "/jobs" [] (-> @job/data :jobs pprint with-out-str))
+  (POST "/update-jobs" [edn]
+    (-> edn js/unescape job/set-jobs!)
+    "ok")
   (ANY "/" req
        (redirect "/index.html"))
   (ANY "/get-pdf" [edn]
