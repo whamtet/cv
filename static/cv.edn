@@ -107,11 +107,11 @@
     (link {:align "right"} "http://matthew.molloy.hk")
 
     break
-    (section-header "Summary" 186)
+    (section-header "Summary" 187)
     break
     [:text "Software developer and data analyst with nine years experience in academic research, the public utilities sector and finance.  Creator of Chunkmapper and Excel-REPL."]
     break
-    (section-header "Work Experience" 266)
+    (section-header "Work Experience" 267)
     break
     (map job (take 2 jobs))
     )
@@ -119,7 +119,7 @@
     (map job (take 4 (drop 2 jobs))))
    (page
     (map job (drop 6 jobs))
-    (section-header "Education" 274)
+    (section-header "Education" 361)
     break
     (simple-section
      "Bachelor of Science (Honours) Physics"
@@ -128,14 +128,14 @@
      "Bachelor of Science Physics and Mathematics"
      "The University of Auckland, NZ, 2006 - 2008")
     break
-    (section-header "Publications" 390)
+    (section-header "Publications" 476)
     break
     [:text {:continued true} "Davies, R. and M. Molloy (2012), Global cloud height fluctuations measured by MISR on Terra from 2000 to 2010, "]
     [:text {:continued true :font (fonts "Calibri Italic")} "Geophys. Res. Lett., "]
     [:text {:continued true} "39, L03701, "]
     (link {} "https://www.google.com.hk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=doi%2010.1029%2F2011GL050506" "doi:10.1029/2011GL050506.")
     break
-    (section-header "Certifications" 470)
+    (section-header "Certifications" 556)
     break
     (simple-section
      "Foundation Certificate in Business Analysis"

@@ -33,14 +33,14 @@ return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"qu
  */
 dogfort.middleware.params.params_request = (function dogfort$middleware$params$params_request(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___7524 = arguments.length;
-var i__1289__auto___7525 = (0);
+var len__1288__auto___2690 = arguments.length;
+var i__1289__auto___2691 = (0);
 while(true){
-if((i__1289__auto___7525 < len__1288__auto___7524)){
-args__1295__auto__.push((arguments[i__1289__auto___7525]));
+if((i__1289__auto___2691 < len__1288__auto___2690)){
+args__1295__auto__.push((arguments[i__1289__auto___2691]));
 
-var G__7526 = (i__1289__auto___7525 + (1));
-i__1289__auto___7525 = G__7526;
+var G__2692 = (i__1289__auto___2691 + (1));
+i__1289__auto___2691 = G__2692;
 continue;
 } else {
 }
@@ -51,9 +51,9 @@ var argseq__1296__auto__ = ((((2) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__1296__auto__);
 });
 
-dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic = (function (handler,request,p__7522){
-var vec__7523 = p__7522;
-var opts = cljs.core.nth.call(null,vec__7523,(0),null);
+dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic = (function (handler,request,p__2688){
+var vec__2689 = p__2688;
+var opts = cljs.core.nth.call(null,vec__2689,(0),null);
 var encoding = (function (){var or__230__auto__ = new cljs.core.Keyword(null,"encoding","encoding",1728578272).cljs$core$IFn$_invoke$arity$1(opts);
 if(cljs.core.truth_(or__230__auto__)){
 return or__230__auto__;
@@ -72,12 +72,12 @@ return handler.call(null,request__$1);
 
 dogfort.middleware.params.params_request.cljs$lang$maxFixedArity = (2);
 
-dogfort.middleware.params.params_request.cljs$lang$applyTo = (function (seq7519){
-var G__7520 = cljs.core.first.call(null,seq7519);
-var seq7519__$1 = cljs.core.next.call(null,seq7519);
-var G__7521 = cljs.core.first.call(null,seq7519__$1);
-var seq7519__$2 = cljs.core.next.call(null,seq7519__$1);
-return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic(G__7520,G__7521,seq7519__$2);
+dogfort.middleware.params.params_request.cljs$lang$applyTo = (function (seq2685){
+var G__2686 = cljs.core.first.call(null,seq2685);
+var seq2685__$1 = cljs.core.next.call(null,seq2685);
+var G__2687 = cljs.core.first.call(null,seq2685__$1);
+var seq2685__$2 = cljs.core.next.call(null,seq2685__$1);
+return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic(G__2686,G__2687,seq2685__$2);
 });
 /**
  * Middleware to parse urlencoded parameters from the query string and form
@@ -96,14 +96,14 @@ return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$vari
  */
 dogfort.middleware.params.wrap_params = (function dogfort$middleware$params$wrap_params(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___7531 = arguments.length;
-var i__1289__auto___7532 = (0);
+var len__1288__auto___2697 = arguments.length;
+var i__1289__auto___2698 = (0);
 while(true){
-if((i__1289__auto___7532 < len__1288__auto___7531)){
-args__1295__auto__.push((arguments[i__1289__auto___7532]));
+if((i__1289__auto___2698 < len__1288__auto___2697)){
+args__1295__auto__.push((arguments[i__1289__auto___2698]));
 
-var G__7533 = (i__1289__auto___7532 + (1));
-i__1289__auto___7532 = G__7533;
+var G__2699 = (i__1289__auto___2698 + (1));
+i__1289__auto___2698 = G__2699;
 continue;
 } else {
 }
@@ -114,22 +114,22 @@ var argseq__1296__auto__ = ((((1) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__1296__auto__);
 });
 
-dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic = (function (handler,p__7529){
-var vec__7530 = p__7529;
-var options = cljs.core.nth.call(null,vec__7530,(0),null);
-return ((function (vec__7530,options){
+dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic = (function (handler,p__2695){
+var vec__2696 = p__2695;
+var options = cljs.core.nth.call(null,vec__2696,(0),null);
+return ((function (vec__2696,options){
 return (function (request){
 return dogfort.middleware.params.params_request.call(null,handler,request,options);
 });
-;})(vec__7530,options))
+;})(vec__2696,options))
 });
 
 dogfort.middleware.params.wrap_params.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.params.wrap_params.cljs$lang$applyTo = (function (seq7527){
-var G__7528 = cljs.core.first.call(null,seq7527);
-var seq7527__$1 = cljs.core.next.call(null,seq7527);
-return dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic(G__7528,seq7527__$1);
+dogfort.middleware.params.wrap_params.cljs$lang$applyTo = (function (seq2693){
+var G__2694 = cljs.core.first.call(null,seq2693);
+var seq2693__$1 = cljs.core.next.call(null,seq2693);
+return dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic(G__2694,seq2693__$1);
 });
 
 //# sourceMappingURL=params.js.map

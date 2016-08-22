@@ -1,6 +1,12 @@
 ;organization dates role place & achievements
 
-{:jobs [{:organization "Admiral Investment"
+{:jobs [
+         {:organization "Asia Miles"
+          :dates "2016 - Present"
+          :role "Data Science Engineer"
+          :place "Hong Kong"
+          :achievements ["Managed data and performed simple analysis on the firm's big data cluster (Spark)."]}
+         {:organization "Admiral Investment"
          :dates "2014 - 2015"
          :role "Assistant to the Chief Investment Officer"
          :place "Hong Kong"
@@ -60,7 +66,7 @@
          :place "Canberra, Australia"
          :achievements ["Modelled behaviour of electrons trapped in a nuclear reactor."
                         "Attended 22nd Canberra International Physics Summer School."]}
-        {:organization "Powerco Ltd"
+        #_{:organization "Powerco Ltd"
          :dates "2006 - 2007"
          :role "Intranet Web Developer"
          :place "New Plymouth, New Zealand"

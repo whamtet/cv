@@ -34,7 +34,10 @@
              edn (js/unescape edn)
              ]
          (try
-           {:status 200 :body (job/add-job edn)}
+           {:status 200 :body (job/add-job edn)
+            :headers
+            {"Content-Disposition" "attachment; filename=\"Matthew Molloy CV.pdf\""
+             "Content-Type" "application/pdf"}}
            (catch :default e
              (prn "errorz" e)
              {:status 500 :body (pr-str e)}))))
