@@ -17,7 +17,7 @@ var p = redlobster.io.parse_url.call(null,path);
 return ((cljs.core._EQ_.call(null,"file:",p.protocol)) || (cljs.core.not.call(null,p.protocol))) && ((cljs.core._EQ_.call(null,"",p.host)) || (cljs.core.not.call(null,p.host)));
 });
 redlobster.io.slurp_http = (function redlobster$io$slurp_http(path){
-var res = redlobster.http.request.call(null,path);
+var res = redlobster.http.request.call(null,redlobster.io.url);
 return redlobster.promise.defer_until_realised.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [res], null),((function (res){
 return (function (){
 return redlobster.stream.read_stream.call(null,cljs.core.deref.call(null,res));
@@ -84,16 +84,16 @@ return redlobster.promise.realise_error.call(null,promise__4443__auto____$1,valu
 var realise = cljs.core.partial.call(null,realise__4444__auto__,promise__4443__auto__);
 var realise_error = cljs.core.partial.call(null,realise_error__4446__auto__,promise__4443__auto__);
 redlobster.promise.on_realised.call(null,redlobster.http.request.call(null,o,data),((function (promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o){
-return (function (p1__4528_SHARP_){
-if(cljs.core.truth_(redlobster.io.http_success_QMARK_.call(null,p1__4528_SHARP_))){
+return (function (p1__4511_SHARP_){
+if(cljs.core.truth_(redlobster.io.http_success_QMARK_.call(null,p1__4511_SHARP_))){
 return realise.call(null,null);
 } else {
-return realise_error.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("redlobster.http","status-code","redlobster.http/status-code",-1286523828),p1__4528_SHARP_.statusCode], null));
+return realise_error.call(null,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword("redlobster.http","status-code","redlobster.http/status-code",-1286523828),p1__4511_SHARP_.statusCode], null));
 }
 });})(promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o))
 ,((function (promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o){
-return (function (p1__4529_SHARP_){
-return realise_error.call(null,p1__4529_SHARP_);
+return (function (p1__4512_SHARP_){
+return realise_error.call(null,p1__4512_SHARP_);
 });})(promise__4443__auto__,realise__4444__auto__,realise_error__4446__auto__,realise,realise_error,o))
 );
 

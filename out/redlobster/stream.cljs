@@ -6,9 +6,7 @@
   (:use-macros [redlobster.macros :only [promise when-realised]]))
 
 (n/require "stream" Stream)
-(try
-  (n/require "fs" [createReadStream createWriteStream])
-  (catch :default e))
+(n/require "fs" [createReadStream createWriteStream])
 
 (defprotocol IStream
   (readable? [this])

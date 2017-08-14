@@ -62,23 +62,23 @@ return (new dogfort.middleware.session.memory.MemoryStore(session_map));
  *   argument; if supplied, the atom is used to hold the session data.
  */
 dogfort.middleware.session.memory.memory_store = (function dogfort$middleware$session$memory$memory_store(var_args){
-var args6106 = [];
-var len__1288__auto___6109 = arguments.length;
-var i__1289__auto___6110 = (0);
+var args6089 = [];
+var len__1288__auto___6092 = arguments.length;
+var i__1289__auto___6093 = (0);
 while(true){
-if((i__1289__auto___6110 < len__1288__auto___6109)){
-args6106.push((arguments[i__1289__auto___6110]));
+if((i__1289__auto___6093 < len__1288__auto___6092)){
+args6089.push((arguments[i__1289__auto___6093]));
 
-var G__6111 = (i__1289__auto___6110 + (1));
-i__1289__auto___6110 = G__6111;
+var G__6094 = (i__1289__auto___6093 + (1));
+i__1289__auto___6093 = G__6094;
 continue;
 } else {
 }
 break;
 }
 
-var G__6108 = args6106.length;
-switch (G__6108) {
+var G__6091 = args6089.length;
+switch (G__6091) {
 case 0:
 return dogfort.middleware.session.memory.memory_store.cljs$core$IFn$_invoke$arity$0();
 
@@ -88,7 +88,7 @@ return dogfort.middleware.session.memory.memory_store.cljs$core$IFn$_invoke$arit
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args6106.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args6089.length)].join('')));
 
 }
 });

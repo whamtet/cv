@@ -21,23 +21,23 @@ return null;
  *   It may take an opts map to pass to clojure.edn/read-string
  */
 dogfort.middleware.edn.wrap_edn_params = (function dogfort$middleware$edn$wrap_edn_params(var_args){
-var args6350 = [];
-var len__1288__auto___6353 = arguments.length;
-var i__1289__auto___6354 = (0);
+var args6333 = [];
+var len__1288__auto___6336 = arguments.length;
+var i__1289__auto___6337 = (0);
 while(true){
-if((i__1289__auto___6354 < len__1288__auto___6353)){
-args6350.push((arguments[i__1289__auto___6354]));
+if((i__1289__auto___6337 < len__1288__auto___6336)){
+args6333.push((arguments[i__1289__auto___6337]));
 
-var G__6355 = (i__1289__auto___6354 + (1));
-i__1289__auto___6354 = G__6355;
+var G__6338 = (i__1289__auto___6337 + (1));
+i__1289__auto___6337 = G__6338;
 continue;
 } else {
 }
 break;
 }
 
-var G__6352 = args6350.length;
-switch (G__6352) {
+var G__6335 = args6333.length;
+switch (G__6335) {
 case 1:
 return dogfort.middleware.edn.wrap_edn_params.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -47,7 +47,7 @@ return dogfort.middleware.edn.wrap_edn_params.cljs$core$IFn$_invoke$arity$2((arg
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args6350.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args6333.length)].join('')));
 
 }
 });

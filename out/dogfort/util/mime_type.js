@@ -14,14 +14,14 @@ return cljs.core.second.call(null,cljs.core.re_find.call(null,/\.([^.\/\\]+)$/,f
  */
 dogfort.util.mime_type.ext_mime_type = (function dogfort$util$mime_type$ext_mime_type(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___6445 = arguments.length;
-var i__1289__auto___6446 = (0);
+var len__1288__auto___6428 = arguments.length;
+var i__1289__auto___6429 = (0);
 while(true){
-if((i__1289__auto___6446 < len__1288__auto___6445)){
-args__1295__auto__.push((arguments[i__1289__auto___6446]));
+if((i__1289__auto___6429 < len__1288__auto___6428)){
+args__1295__auto__.push((arguments[i__1289__auto___6429]));
 
-var G__6447 = (i__1289__auto___6446 + (1));
-i__1289__auto___6446 = G__6447;
+var G__6430 = (i__1289__auto___6429 + (1));
+i__1289__auto___6429 = G__6430;
 continue;
 } else {
 }
@@ -32,19 +32,19 @@ var argseq__1296__auto__ = ((((1) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.util.mime_type.ext_mime_type.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__1296__auto__);
 });
 
-dogfort.util.mime_type.ext_mime_type.cljs$core$IFn$_invoke$arity$variadic = (function (filename,p__6443){
-var vec__6444 = p__6443;
-var mime_types = cljs.core.nth.call(null,vec__6444,(0),null);
+dogfort.util.mime_type.ext_mime_type.cljs$core$IFn$_invoke$arity$variadic = (function (filename,p__6426){
+var vec__6427 = p__6426;
+var mime_types = cljs.core.nth.call(null,vec__6427,(0),null);
 var mime_types__$1 = cljs.core.merge.call(null,dogfort.util.mime_type.default_mime_types,mime_types);
 return mime_types__$1.call(null,dogfort.util.mime_type.filename_ext.call(null,filename));
 });
 
 dogfort.util.mime_type.ext_mime_type.cljs$lang$maxFixedArity = (1);
 
-dogfort.util.mime_type.ext_mime_type.cljs$lang$applyTo = (function (seq6441){
-var G__6442 = cljs.core.first.call(null,seq6441);
-var seq6441__$1 = cljs.core.next.call(null,seq6441);
-return dogfort.util.mime_type.ext_mime_type.cljs$core$IFn$_invoke$arity$variadic(G__6442,seq6441__$1);
+dogfort.util.mime_type.ext_mime_type.cljs$lang$applyTo = (function (seq6424){
+var G__6425 = cljs.core.first.call(null,seq6424);
+var seq6424__$1 = cljs.core.next.call(null,seq6424);
+return dogfort.util.mime_type.ext_mime_type.cljs$core$IFn$_invoke$arity$variadic(G__6425,seq6424__$1);
 });
 
 //# sourceMappingURL=mime_type.js.map

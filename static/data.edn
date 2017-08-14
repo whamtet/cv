@@ -1,8 +1,20 @@
 ;organization dates role place & achievements
 
 {:jobs [
+         {:organization "University Insider"
+          :url "https://universityinsider.com"
+          :dates "2017"
+          :role "Technical Cofounder"
+          :place "Hong Kong"
+          :achievements ["I am creating a College Admissions Consulting Marketplace."]}
+         {:organization "Taipan Health"
+          :dates "2016"
+          :role "Web Developer"
+          :place "Hong Kong"
+          :achievements ["Created Remote Teleradiology Platform."]
+          }
          {:organization "Asia Miles"
-          :dates "2016 - Present"
+          :dates "2016"
           :role "Data Science Engineer"
           :place "Hong Kong"
           :achievements ["Managed data and performed simple analysis on the firm's big data cluster (Spark)."]}
@@ -80,9 +92,11 @@
             :url "https://github.com/whamtet/dogfort"
             :description "A functional wrapper for Node.js.  Dogfort demonstrates the elegance of functional programming on a web server.  Instead of writing to a mutable response object, developers pass immutable Clojurescript maps through a series of middleware.  Built with Bodil Stokke."
             }
-           {:project "Chrome Webscraping Toolkit"
-            :url "https://github.com/whamtet/chrome-webscraping-toolkit"
-            :description "Chrome Webscraping Toolkit makes scraping data from websites fun.  When websites load content with complex AJAX or session management it can be easiest to store page data from a live session.  The toolkit hotloads code to enables iterative development within a single session."
+           {:project "Mattyscript"
+            :url "https://github.com/whamtet/mattyscript"
+            :description "Mattyscript is a lightweight lisp to javascript compiler that integrates very effectively with reactive GUI frameworks.
+            It is in production use at universityinsider.com
+            "
             }
            {:project "Excel REPL"
             :url "https://github.com/whamtet/excel-repl"

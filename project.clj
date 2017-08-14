@@ -4,7 +4,7 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.228"]
                  [org.clojure/data.json "0.2.6" :classifier "aot"]
-                 [dogfort "0.2.0-SNAPSHOT"]
+                 [dogfort "0.2.1"]
                  [cljs-pdfkit "0.1.0-SNAPSHOT"]
                  ]
   :jvm-opts ^:replace ["-Xmx1g" "-server"]

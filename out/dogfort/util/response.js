@@ -5,14 +5,14 @@ dogfort.util.response.status_codes = cljs.core.PersistentHashMap.fromArrays([(41
 dogfort.util.response.status_cats = cljs.core.PersistentHashMap.fromArrays([(410),(416),(101),(206),(508),(300),(204),(405),(450),(502),(307),(402),(429),(506),(305),(418),(304),(401),(417),(500),(599),(303),(100),(426),(413),(301),(424),(408),(411),(507),(201),(444),(302),(202),(200),(431),(503),(414),(404),(422),(423),(409),(400),(509),(207),(403),(425),(406)],["http://25.media.tumblr.com/tumblr_lwjgd4GlG21qzhbl2o7_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgd4GlG21qzhbl2o3_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgzc5VCs1qzhbl2o2_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgxg7jrJ1qzhbl2o5_1280.jpg","http://24.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o4_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgtfRJGj1qzhbl2o2_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgxg7jrJ1qzhbl2o4_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o6_1280.jpg","http://25.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o9_1280.jpg","http://24.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o2_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgtfRJGj1qzhbl2o7_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o3_1280.jpg","http://25.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o6_1280.jpg","http://25.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o12_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgtfRJGj1qzhbl2o6_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgd4GlG21qzhbl2o1_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgtfRJGj1qzhbl2o5_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o2_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgd4GlG21qzhbl2o2_1280.jpg","http://25.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o1_1280.jpg","http://25.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o6_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgtfRJGj1qzhbl2o4_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgzc5VCs1qzhbl2o1_1280.jpg","http://25.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o5_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgd4GlG21qzhbl2o5_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgtfRJGj1qzhbl2o3_1280.jpg","http://24.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o3_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o8_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgd4GlG21qzhbl2o6_1280.jpg","http://25.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o3_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgxg7jrJ1qzhbl2o2_1280.jpg","http://24.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o8_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgtfRJGj1qzhbl2o1_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgxg7jrJ1qzhbl2o3_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgxg7jrJ1qzhbl2o1_1280.jpg","http://24.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o7_1280.jpg","http://24.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o11_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgd4GlG21qzhbl2o4_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o5_1280.jpg","http://24.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o1_1280.jpg","http://24.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o2_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o9_1280.jpg","http://24.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o1_1280.jpg","http://24.media.tumblr.com/tumblr_lwjfwtx7P81qzhbl2o5_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgxg7jrJ1qzhbl2o6_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o4_1280.jpg","http://24.media.tumblr.com/tumblr_lwjg4pjFFI1qzhbl2o4_1280.jpg","http://25.media.tumblr.com/tumblr_lwjgmsfFs31qzhbl2o7_1280.jpg"]);
 dogfort.util.response.response = (function dogfort$util$response$response(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___6846 = arguments.length;
-var i__1289__auto___6847 = (0);
+var len__1288__auto___6829 = arguments.length;
+var i__1289__auto___6830 = (0);
 while(true){
-if((i__1289__auto___6847 < len__1288__auto___6846)){
-args__1295__auto__.push((arguments[i__1289__auto___6847]));
+if((i__1289__auto___6830 < len__1288__auto___6829)){
+args__1295__auto__.push((arguments[i__1289__auto___6830]));
 
-var G__6848 = (i__1289__auto___6847 + (1));
-i__1289__auto___6847 = G__6848;
+var G__6831 = (i__1289__auto___6830 + (1));
+i__1289__auto___6830 = G__6831;
 continue;
 } else {
 }
@@ -23,20 +23,20 @@ var argseq__1296__auto__ = ((((2) < args__1295__auto__.length))?(new cljs.core.I
 return dogfort.util.response.response.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__1296__auto__);
 });
 
-dogfort.util.response.response.cljs$core$IFn$_invoke$arity$variadic = (function (status,body,p__6844){
-var vec__6845 = p__6844;
-var content_type = cljs.core.nth.call(null,vec__6845,(0),null);
+dogfort.util.response.response.cljs$core$IFn$_invoke$arity$variadic = (function (status,body,p__6827){
+var vec__6828 = p__6827;
+var content_type = cljs.core.nth.call(null,vec__6828,(0),null);
 return new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"status","status",-1997798413),status,new cljs.core.Keyword(null,"headers","headers",-835030129),(cljs.core.truth_(content_type)?new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"content-type","content-type",-508222634),content_type], null):cljs.core.PersistentArrayMap.EMPTY),new cljs.core.Keyword(null,"body","body",-2049205669),body], null);
 });
 
 dogfort.util.response.response.cljs$lang$maxFixedArity = (2);
 
-dogfort.util.response.response.cljs$lang$applyTo = (function (seq6841){
-var G__6842 = cljs.core.first.call(null,seq6841);
-var seq6841__$1 = cljs.core.next.call(null,seq6841);
-var G__6843 = cljs.core.first.call(null,seq6841__$1);
-var seq6841__$2 = cljs.core.next.call(null,seq6841__$1);
-return dogfort.util.response.response.cljs$core$IFn$_invoke$arity$variadic(G__6842,G__6843,seq6841__$2);
+dogfort.util.response.response.cljs$lang$applyTo = (function (seq6824){
+var G__6825 = cljs.core.first.call(null,seq6824);
+var seq6824__$1 = cljs.core.next.call(null,seq6824);
+var G__6826 = cljs.core.first.call(null,seq6824__$1);
+var seq6824__$2 = cljs.core.next.call(null,seq6824__$1);
+return dogfort.util.response.response.cljs$core$IFn$_invoke$arity$variadic(G__6825,G__6826,seq6824__$2);
 });
 dogfort.util.response.default_response = (function dogfort$util$response$default_response(status){
 return dogfort.util.response.response.call(null,status,cljs.core.flatten.call(null,new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, ["<html><head>","<style>","body { text-align: center; }","img { box-shadow: 0px 8px 32px black; }","</style>",(function (){var label = [cljs.core.str(status),cljs.core.str(" "),cljs.core.str(dogfort.util.response.status_codes.call(null,status))].join('');

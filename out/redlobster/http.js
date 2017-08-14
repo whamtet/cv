@@ -7,23 +7,23 @@ goog.require('redlobster.stream');
 goog.require('cljs.node');
 redlobster.http.http = require("http");
 redlobster.http.request = (function redlobster$http$request(var_args){
-var args4516 = [];
-var len__1288__auto___4519 = arguments.length;
-var i__1289__auto___4520 = (0);
+var args4499 = [];
+var len__1288__auto___4502 = arguments.length;
+var i__1289__auto___4503 = (0);
 while(true){
-if((i__1289__auto___4520 < len__1288__auto___4519)){
-args4516.push((arguments[i__1289__auto___4520]));
+if((i__1289__auto___4503 < len__1288__auto___4502)){
+args4499.push((arguments[i__1289__auto___4503]));
 
-var G__4521 = (i__1289__auto___4520 + (1));
-i__1289__auto___4520 = G__4521;
+var G__4504 = (i__1289__auto___4503 + (1));
+i__1289__auto___4503 = G__4504;
 continue;
 } else {
 }
 break;
 }
 
-var G__4518 = args4516.length;
-switch (G__4518) {
+var G__4501 = args4499.length;
+switch (G__4501) {
 case 2:
 return redlobster.http.request.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -33,7 +33,7 @@ return redlobster.http.request.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args4516.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args4499.length)].join('')));
 
 }
 });
@@ -52,21 +52,21 @@ return redlobster.promise.realise_error.call(null,promise__4434__auto____$1,valu
 ;
 var realise = cljs.core.partial.call(null,realise__4435__auto__,promise__4434__auto__);
 var realise_error = cljs.core.partial.call(null,realise_error__4437__auto__,promise__4434__auto__);
-var req_4523 = redlobster.http.http.request(cljs.core.clj__GT_js.call(null,options),((function (promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
-return (function (p1__4514_SHARP_){
-return realise.call(null,p1__4514_SHARP_);
+var req_4506 = redlobster.http.http.request(cljs.core.clj__GT_js.call(null,options),((function (promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
+return (function (p1__4497_SHARP_){
+return realise.call(null,p1__4497_SHARP_);
 });})(promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error))
 );
-redlobster.events.on.call(null,req_4523,"error",((function (req_4523,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
-return (function (p1__4515_SHARP_){
-return realise_error.call(null,p1__4515_SHARP_);
-});})(req_4523,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error))
+redlobster.events.on.call(null,req_4506,"error",((function (req_4506,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
+return (function (p1__4498_SHARP_){
+return realise_error.call(null,p1__4498_SHARP_);
+});})(req_4506,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error))
 );
 
 if(cljs.core.truth_(body)){
-redlobster.stream.write_stream.call(null,req_4523,body);
+redlobster.stream.write_stream.call(null,req_4506,body);
 } else {
-req_4523.end();
+req_4506.end();
 }
 
 return promise__4434__auto__;

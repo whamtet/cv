@@ -5,11 +5,10 @@ goog.require('redlobster.promise');
 goog.require('redlobster.events');
 goog.require('cljs.node');
 redlobster.stream.Stream = require("stream");
-try{redlobster.stream.createReadStream = (require("fs")["createReadStream"]);
+redlobster.stream.createReadStream = (require("fs")["createReadStream"]);
 
 redlobster.stream.createWriteStream = (require("fs")["createWriteStream"]);
-}catch (e4488){var e_4489 = e4488;
-}
+
 /**
  * @interface
  */
@@ -379,14 +378,14 @@ return [cljs.core.str(current),cljs.core.str(data__$1)].join('');
 });
 redlobster.stream.read_stream = (function redlobster$stream$read_stream(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___4497 = arguments.length;
-var i__1289__auto___4498 = (0);
+var len__1288__auto___4480 = arguments.length;
+var i__1289__auto___4481 = (0);
 while(true){
-if((i__1289__auto___4498 < len__1288__auto___4497)){
-args__1295__auto__.push((arguments[i__1289__auto___4498]));
+if((i__1289__auto___4481 < len__1288__auto___4480)){
+args__1295__auto__.push((arguments[i__1289__auto___4481]));
 
-var G__4499 = (i__1289__auto___4498 + (1));
-i__1289__auto___4498 = G__4499;
+var G__4482 = (i__1289__auto___4481 + (1));
+i__1289__auto___4481 = G__4482;
 continue;
 } else {
 }
@@ -397,46 +396,46 @@ var argseq__1296__auto__ = ((((1) < args__1295__auto__.length))?(new cljs.core.I
 return redlobster.stream.read_stream.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__1296__auto__);
 });
 
-redlobster.stream.read_stream.cljs$core$IFn$_invoke$arity$variadic = (function (stream,p__4495){
-var vec__4496 = p__4495;
-var encoding = cljs.core.nth.call(null,vec__4496,(0),null);
+redlobster.stream.read_stream.cljs$core$IFn$_invoke$arity$variadic = (function (stream,p__4478){
+var vec__4479 = p__4478;
+var encoding = cljs.core.nth.call(null,vec__4479,(0),null);
 var promise__4434__auto__ = redlobster.promise.promise.call(null);
-var realise__4435__auto__ = ((function (promise__4434__auto__,vec__4496,encoding){
+var realise__4435__auto__ = ((function (promise__4434__auto__,vec__4479,encoding){
 return (function (promise__4434__auto____$1,value__4436__auto__){
 return redlobster.promise.realise.call(null,promise__4434__auto____$1,value__4436__auto__);
-});})(promise__4434__auto__,vec__4496,encoding))
+});})(promise__4434__auto__,vec__4479,encoding))
 ;
-var realise_error__4437__auto__ = ((function (promise__4434__auto__,realise__4435__auto__,vec__4496,encoding){
+var realise_error__4437__auto__ = ((function (promise__4434__auto__,realise__4435__auto__,vec__4479,encoding){
 return (function (promise__4434__auto____$1,value__4436__auto__){
 return redlobster.promise.realise_error.call(null,promise__4434__auto____$1,value__4436__auto__);
-});})(promise__4434__auto__,realise__4435__auto__,vec__4496,encoding))
+});})(promise__4434__auto__,realise__4435__auto__,vec__4479,encoding))
 ;
 var realise = cljs.core.partial.call(null,realise__4435__auto__,promise__4434__auto__);
 var realise_error = cljs.core.partial.call(null,realise_error__4437__auto__,promise__4434__auto__);
-var content_4500 = cljs.core.atom.call(null,"");
-var encoding_4501__$1 = (function (){var or__230__auto__ = encoding;
+var content_4483 = cljs.core.atom.call(null,"");
+var encoding_4484__$1 = (function (){var or__230__auto__ = encoding;
 if(cljs.core.truth_(or__230__auto__)){
 return or__230__auto__;
 } else {
 return "utf8";
 }
 })();
-redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"error","error",-978969032),((function (content_4500,encoding_4501__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4496,encoding){
-return (function (p1__4492_SHARP_){
-return realise_error.call(null,p1__4492_SHARP_);
-});})(content_4500,encoding_4501__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4496,encoding))
+redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"error","error",-978969032),((function (content_4483,encoding_4484__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4479,encoding){
+return (function (p1__4475_SHARP_){
+return realise_error.call(null,p1__4475_SHARP_);
+});})(content_4483,encoding_4484__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4479,encoding))
 );
 
-redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"data","data",-232669377),((function (content_4500,encoding_4501__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4496,encoding){
+redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"data","data",-232669377),((function (content_4483,encoding_4484__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4479,encoding){
 return (function (data){
-return cljs.core.swap_BANG_.call(null,content_4500,redlobster.stream.append_data,data,encoding_4501__$1);
-});})(content_4500,encoding_4501__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4496,encoding))
+return cljs.core.swap_BANG_.call(null,content_4483,redlobster.stream.append_data,data,encoding_4484__$1);
+});})(content_4483,encoding_4484__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4479,encoding))
 );
 
-redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"end","end",-268185958),((function (content_4500,encoding_4501__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4496,encoding){
+redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"end","end",-268185958),((function (content_4483,encoding_4484__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4479,encoding){
 return (function (){
-return realise.call(null,cljs.core.deref.call(null,content_4500));
-});})(content_4500,encoding_4501__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4496,encoding))
+return realise.call(null,cljs.core.deref.call(null,content_4483));
+});})(content_4483,encoding_4484__$1,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4479,encoding))
 );
 
 return promise__4434__auto__;
@@ -444,10 +443,10 @@ return promise__4434__auto__;
 
 redlobster.stream.read_stream.cljs$lang$maxFixedArity = (1);
 
-redlobster.stream.read_stream.cljs$lang$applyTo = (function (seq4493){
-var G__4494 = cljs.core.first.call(null,seq4493);
-var seq4493__$1 = cljs.core.next.call(null,seq4493);
-return redlobster.stream.read_stream.cljs$core$IFn$_invoke$arity$variadic(G__4494,seq4493__$1);
+redlobster.stream.read_stream.cljs$lang$applyTo = (function (seq4476){
+var G__4477 = cljs.core.first.call(null,seq4476);
+var seq4476__$1 = cljs.core.next.call(null,seq4476);
+return redlobster.stream.read_stream.cljs$core$IFn$_invoke$arity$variadic(G__4477,seq4476__$1);
 });
 redlobster.stream.read_binary_stream = (function redlobster$stream$read_binary_stream(stream){
 var promise__4434__auto__ = redlobster.promise.promise.call(null);
@@ -463,33 +462,33 @@ return redlobster.promise.realise_error.call(null,promise__4434__auto____$1,valu
 ;
 var realise = cljs.core.partial.call(null,realise__4435__auto__,promise__4434__auto__);
 var realise_error = cljs.core.partial.call(null,realise_error__4437__auto__,promise__4434__auto__);
-var arrays_4502 = [];
+var arrays_4485 = [];
 redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"error","error",-978969032),realise_error);
 
-redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"data","data",-232669377),((function (arrays_4502,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
+redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"data","data",-232669377),((function (arrays_4485,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
 return (function (data){
-return arrays_4502.push(data);
-});})(arrays_4502,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error))
+return arrays_4485.push(data);
+});})(arrays_4485,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error))
 );
 
-redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"end","end",-268185958),((function (arrays_4502,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
+redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"end","end",-268185958),((function (arrays_4485,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error){
 return (function (){
-return realise.call(null,Buffer.concat(arrays_4502));
-});})(arrays_4502,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error))
+return realise.call(null,Buffer.concat(arrays_4485));
+});})(arrays_4485,promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error))
 );
 
 return promise__4434__auto__;
 });
 redlobster.stream.write_stream = (function redlobster$stream$write_stream(var_args){
 var args__1295__auto__ = [];
-var len__1288__auto___4509 = arguments.length;
-var i__1289__auto___4510 = (0);
+var len__1288__auto___4492 = arguments.length;
+var i__1289__auto___4493 = (0);
 while(true){
-if((i__1289__auto___4510 < len__1288__auto___4509)){
-args__1295__auto__.push((arguments[i__1289__auto___4510]));
+if((i__1289__auto___4493 < len__1288__auto___4492)){
+args__1295__auto__.push((arguments[i__1289__auto___4493]));
 
-var G__4511 = (i__1289__auto___4510 + (1));
-i__1289__auto___4510 = G__4511;
+var G__4494 = (i__1289__auto___4493 + (1));
+i__1289__auto___4493 = G__4494;
 continue;
 } else {
 }
@@ -500,32 +499,32 @@ var argseq__1296__auto__ = ((((2) < args__1295__auto__.length))?(new cljs.core.I
 return redlobster.stream.write_stream.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__1296__auto__);
 });
 
-redlobster.stream.write_stream.cljs$core$IFn$_invoke$arity$variadic = (function (stream,data,p__4507){
-var vec__4508 = p__4507;
-var encoding = cljs.core.nth.call(null,vec__4508,(0),null);
+redlobster.stream.write_stream.cljs$core$IFn$_invoke$arity$variadic = (function (stream,data,p__4490){
+var vec__4491 = p__4490;
+var encoding = cljs.core.nth.call(null,vec__4491,(0),null);
 var promise__4434__auto__ = redlobster.promise.promise.call(null);
-var realise__4435__auto__ = ((function (promise__4434__auto__,vec__4508,encoding){
+var realise__4435__auto__ = ((function (promise__4434__auto__,vec__4491,encoding){
 return (function (promise__4434__auto____$1,value__4436__auto__){
 return redlobster.promise.realise.call(null,promise__4434__auto____$1,value__4436__auto__);
-});})(promise__4434__auto__,vec__4508,encoding))
+});})(promise__4434__auto__,vec__4491,encoding))
 ;
-var realise_error__4437__auto__ = ((function (promise__4434__auto__,realise__4435__auto__,vec__4508,encoding){
+var realise_error__4437__auto__ = ((function (promise__4434__auto__,realise__4435__auto__,vec__4491,encoding){
 return (function (promise__4434__auto____$1,value__4436__auto__){
 return redlobster.promise.realise_error.call(null,promise__4434__auto____$1,value__4436__auto__);
-});})(promise__4434__auto__,realise__4435__auto__,vec__4508,encoding))
+});})(promise__4434__auto__,realise__4435__auto__,vec__4491,encoding))
 ;
 var realise = cljs.core.partial.call(null,realise__4435__auto__,promise__4434__auto__);
 var realise_error = cljs.core.partial.call(null,realise_error__4437__auto__,promise__4434__auto__);
-redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"close","close",1835149582),((function (promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4508,encoding){
+redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"close","close",1835149582),((function (promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4491,encoding){
 return (function (){
 return realise.call(null,null);
-});})(promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4508,encoding))
+});})(promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4491,encoding))
 );
 
-redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"error","error",-978969032),((function (promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4508,encoding){
-return (function (p1__4503_SHARP_){
-return realise_error.call(null,p1__4503_SHARP_);
-});})(promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4508,encoding))
+redlobster.events.on.call(null,stream,new cljs.core.Keyword(null,"error","error",-978969032),((function (promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4491,encoding){
+return (function (p1__4486_SHARP_){
+return realise_error.call(null,p1__4486_SHARP_);
+});})(promise__4434__auto__,realise__4435__auto__,realise_error__4437__auto__,realise,realise_error,vec__4491,encoding))
 );
 
 if(cljs.core.truth_(redlobster.stream.stream_QMARK_.call(null,data))){
@@ -558,12 +557,12 @@ return promise__4434__auto__;
 
 redlobster.stream.write_stream.cljs$lang$maxFixedArity = (2);
 
-redlobster.stream.write_stream.cljs$lang$applyTo = (function (seq4504){
-var G__4505 = cljs.core.first.call(null,seq4504);
-var seq4504__$1 = cljs.core.next.call(null,seq4504);
-var G__4506 = cljs.core.first.call(null,seq4504__$1);
-var seq4504__$2 = cljs.core.next.call(null,seq4504__$1);
-return redlobster.stream.write_stream.cljs$core$IFn$_invoke$arity$variadic(G__4505,G__4506,seq4504__$2);
+redlobster.stream.write_stream.cljs$lang$applyTo = (function (seq4487){
+var G__4488 = cljs.core.first.call(null,seq4487);
+var seq4487__$1 = cljs.core.next.call(null,seq4487);
+var G__4489 = cljs.core.first.call(null,seq4487__$1);
+var seq4487__$2 = cljs.core.next.call(null,seq4487__$1);
+return redlobster.stream.write_stream.cljs$core$IFn$_invoke$arity$variadic(G__4488,G__4489,seq4487__$2);
 });
 
 //# sourceMappingURL=stream.js.map

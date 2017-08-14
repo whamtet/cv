@@ -103,22 +103,22 @@
 
     ;;title
     [:text {:font-size 22 :align "center" :move-down true :font (fonts "Garamond") :character-spacing 3} "MATTHEW MOLLOY"]
-    (link {:align "right"} "matthew@molloy.hk")
-    (link {:align "right"} "http://matthew.molloy.hk")
+    (link {:align "right"} "whamtet@gmail.com")
+    (link {:align "right"} "https://whamtet-cv.herokuapp.com")
 
     break
     (section-header "Summary" 187)
     break
-    [:text "Software developer and data analyst with nine years experience in academic research, the public utilities sector and finance.  Creator of Chunkmapper and Excel-REPL."]
+    [:text "Software developer and data analyst with ten years experience in academic research, the public utilities sector and finance.  Creator of Chunkmapper and Excel-REPL."]
     break
     (section-header "Work Experience" 267)
     break
-    (map job (take 2 jobs))
+    (map job (take 4 jobs))
     )
    (page
-    (map job (take 4 (drop 2 jobs))))
+    (map job (take 4 (drop 4 jobs))))
    (page
-    (map job (drop 6 jobs))
+    (map job (drop 8 jobs))
     (section-header "Education" 361)
     break
     (simple-section

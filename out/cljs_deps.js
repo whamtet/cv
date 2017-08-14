@@ -5,7 +5,7 @@ goog.addDependency("../redlobster/promise.js", ['redlobster.promise'], ['cljs.co
 goog.addDependency("../dogfort/middleware/session/store.js", ['dogfort.middleware.session.store'], ['cljs.core']);
 goog.addDependency("../dogfort/middleware/session/memory.js", ['dogfort.middleware.session.memory'], ['cljs.core', 'dogfort.middleware.session.store']);
 goog.addDependency("../dogfort/util/data.js", ['dogfort.util.data'], ['cljs.core']);
-goog.addDependency("../3FB0DCC.js", ['cljs.nodejs'], ['cljs.core']);
+goog.addDependency("../BC02D8A.js", ['cljs.nodejs'], ['cljs.core']);
 goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
 goog.addDependency("../dogfort/util/codec.js", ['dogfort.util.codec'], ['dogfort.util.data', 'cljs.core', 'cljs.nodejs', 'clojure.string']);
 goog.addDependency("../dogfort/middleware/cookies.js", ['dogfort.middleware.cookies'], ['redlobster.promise', 'cljs.core', 'dogfort.util.codec', 'clojure.string']);
